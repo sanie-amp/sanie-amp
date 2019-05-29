@@ -204,3 +204,10 @@ video {
     width: 35vw;
   }
 }
+
+@media (max-aspect-ratio: 3/2) {
+  video {
+    min-height: 100%;
+    width: auto;
+  }
+}
