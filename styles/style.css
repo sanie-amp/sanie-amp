@@ -147,8 +147,8 @@ ul.page li:last-of-type {
 }
 
 video {
-  width: auto;
-  min-height: 100%;
+  min-width: 100%;
+  height: auto;
 }
 
 .video-container {
