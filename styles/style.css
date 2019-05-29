@@ -1,8 +1,9 @@
 @font-face {
   font-family: Stabil Grotesk;
   font-weight: normal;
-  src: url('styles/fonts/StabilGrotesk-Regular.woff2') format('woff2'),
-       url('styles/fonts/StabilGrotesk-Regular.woff') format('woff'),
+  src:  url('fonts/LabilGroteskTrial-Light.otf') format('opentype');
+        /* url('fonts/LabilGrotesk-Regular.woff2') format('woff2'),
+        url('fonts/LabilGrotesk-Regular.woff') format('woff'); */
        /* url('myfont.ttf') format('truetype'); */
 }
 
@@ -12,8 +13,11 @@ body, html {
   font-family: Stabil Grotesk, sans-serif;
   font-weight: normal;
   font-size: 18px;
+  line-height: 1.1;
   color: #fff;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -36,32 +40,104 @@ a:hover {
   cursor:pointer;
 }
 
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+}
+
 /* ------------------------- typography -------------------------------- */
 
 h1 {
   font-family: Stabil Grotesk, sans-serif;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 2em;
+  line-height: 1.1;
+}
+
+::selection {
+  background: #000; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #000; /* Gecko Browsers */
 }
 
 /* ------------------------- navigation -------------------------------- */
 
 ul.navigation {
-  width: 30%;
+  width: 20%;
   height: 100%;
   margin: 0;
   padding: 2em;
+  position: fixed;
 }
 
 .navigation a {
   font-size: 1em;
-  padding: .1em 0;
+  /* padding: .1em 0; */
+  line-height: 1.2;
+  padding: 0;
   margin: 0;
   transition: all .3s ease-in-out;
 }
 
 .navigation a:hover {
   padding-left: .3em;
+}
+
+.logo-nav {
+  /* width: 40%; */
+  height: auto;
+  padding: 0 0 2.5em 0;
+  margin: 0;
+  line-height: 0;
+}
+
+.logo-nav:hover {
+  cursor: pointer;
+}
+
+.logo-nav > a {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.logo-nav > a:hover {
+  cursor: pointer;
+  padding: 0;
+}
+
+.logo-nav > a > img {
+  height: 1.6em;
+}
+
+.collapsible > img {
+  height: 1.6em;
+}
+
+/* ------------------------- content -------------------------------- */
+
+ul.page {
+  margin-left: 20%;
+  display: block;
+  padding: 2em 0;
+}
+
+ul.page li {
+  padding: 0 0 2em 0;
+}
+
+ul.page li:last-of-type {
+  padding: 0;
+}
+
+.clip-fairs {
+  -webkit-clip-path: polygon(calc(60% + 12vh) 0, 100% 0%, 100% 100%, calc(60% - 12vh) 100%);
+  clip-path: polygon(calc(60% + 12vh) 0, 100% 0%, 100% 100%, calc(60% - 12vh) 100%);
 }
 
 /* ------------------------- video & clip -------------------------------- */
