@@ -127,6 +127,10 @@ h1 {
   height: 1.6rem;
 }
 
+.collapsible > svg {
+  height: 1.6rem;
+}
+
 .content {
   padding: 0;
   /* display: block; */
@@ -197,6 +201,7 @@ video {
   width: 15vw;
   height: auto;
   align-self: center;
+  cursor: pointer;
 }
 
 
@@ -207,6 +212,14 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ------------------------- logo center ------------------------------- */
+
+.polymorph, .polymorph2, .polymorph3,
+.polymorph4, .polymorph5, .polymorph6,
+.polymorph7, .polymorph8 {
+  fill: #fff;
 }
 
 /* ------------------------- queries --------------------------- */
@@ -236,7 +249,7 @@ video {
 
   ul.page {
     margin-left: 2em;
-    padding: 0;
+    padding: 0 0 2em 0;
     /* padding-top: 5.6em; */
   }
 

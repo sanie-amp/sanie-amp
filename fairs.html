@@ -12,24 +12,26 @@
 
   <body>
     <div class="parent">
-    <!-- <ul class="navigation">
-      <li class="logo-nav"><a href="#home"><img src="assets/logo_white.svg" alt=""></a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#whoweare">Who We Are</a></li>
-      <li><a href="#capabilities">Capabilities</a></li>
-      <li><a href="#clients">Clients</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul> -->
 
     <div class="navigation" id="myTopnav">
-      <button class="collapsible" onclick="toggleMenu()"><img src="assets/logo_white.svg" alt=""></button>
+      <button class="collapsible" onclick="toggleMenu()">
+        <svg id="logo" viewBox="0 0 145.18 50.39">
+          <polygon class="polymorph" points="11.63,0 0,50.39 8.06,50.39 19.7,0 "/>
+          <polygon class="polymorph2" points="51.02,0 39.39,50.39 47.45,50.39 59.09,0 "/>
+          <polygon class="polymorph3" points="82.36,0 70.73,50.39 78.79,50.39 90.43,0 "/>
+          <polygon class="polymorph4" points="121.77,0 110.14,50.39 118.2,50.39 129.83,0 "/>
+          <polygon class="polymorph7" points="90.44,0 102.08,50.39 110.14,50.39 98.51,0 "/>
+          <polygon class="polymorph6" points="59.1,0 70.74,50.39 78.8,50.39 67.17,0 "/>
+          <polygon class="polymorph5" points="19.7,0 31.34,50.39 39.4,50.39 27.77,0 "/>
+          <polygon class="polymorph8" points="129.85,0 137.12,31.5 145.18,31.5 137.91,0 "/>
+        </svg>
+      </button>
       <ul class="content" id="menu">
         <li><a href="#about">About</a></li>
         <li><a href="#whoweare">Who We Are</a></li>
         <li><a href="#capabilities">Capabilities</a></li>
         <li><a href="#clients">Clients</a></li>
         <li><a href="#contact">Contact</a></li>
-        <!-- <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">Menu</a></li> -->
       </ul>
     </div>
 
@@ -86,5 +88,149 @@
   </div>
 
   <script src="scripts/index.js"></script>
+  <script src="scripts/anime.min.js"></script>
+
+  <script>
+  var btn = document.getElementById('logo');
+
+  btn.onmouseenter = function() {
+
+    var tl = anime.timeline({
+      easing: 'easeInExpo',
+      duration: 1000
+    });
+
+    tl
+    .add({
+      targets: '.polymorph',
+      points: [
+        { value: '0,50.2 0,50.2 8.1,50.2 8.1,50.2' }
+      ],
+      duration: 500,
+      loop: false
+    }, 0)
+    .add({
+      targets: '.polymorph2',
+      points: [
+        { value: '39.4,50.2 39.4,50.2 47.5,50.2 47.5,50.2' }
+      ],
+      duration: 500,
+      loop: false
+    }, 0)
+    .add({
+      targets: '.polymorph3',
+      points: [
+        { value: '70.7,50.2 70.7,50.2 78.8,50.2 78.8,50.2' }
+      ],
+      duration: 500,
+      loop: false
+    }, 0)
+    .add({
+      targets: '.polymorph4',
+      points: [
+        { value: '110.1,50.2 110.1,50.2 118.2,50.2 118.2,50.2' }
+      ],
+      duration: 500,
+      loop: false
+    }, 0)
+    .add({
+      targets: '.polymorph5',
+      points: [
+        { value: '31.3,50.2 31.3,50.2 39.3,50.2 39.3,50.2' }
+      ],
+      duration: 500,
+      loop: false
+    }, 500)
+    .add({
+      targets: '.polymorph6',
+      points: [
+        { value: '70.7,50.2 70.7,50.2 78.8,50.2 78.8,50.2' }
+      ],
+      duration: 500,
+      loop: false
+    }, 500)
+    .add({
+      targets: '.polymorph7',
+      points: [
+        { value: '102,50.2 102,50.2 110.1,50.2 110.1,50.2' }
+      ],
+      duration: 500,
+      loop: false
+    }, 500)
+    .add({
+      targets: '.polymorph8',
+      points: [
+        { value: '137.1,31.3 137.1,31.3 145.1,31.3 145.1,31.3' }
+      ],
+      duration: 500,
+      loop: false
+    }, 500)
+    .add({
+      targets: '.polymorph',
+      points: [
+        { value: '11.63,0 0,50.39 8.06,50.39 19.7,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1000)
+    .add({
+      targets: '.polymorph2',
+      points: [
+        { value: '51.02,0 39.39,50.39 47.45,50.39 59.09,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1000)
+    .add({
+      targets: '.polymorph3',
+      points: [
+        { value: '82.36,0 70.73,50.39 78.79,50.39 90.43,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1000)
+    .add({
+      targets: '.polymorph4',
+      points: [
+        { value: '121.77,0 110.14,50.39 118.2,50.39 129.83,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1000)
+    .add({
+      targets: '.polymorph5',
+      points: [
+        { value: '19.7,0 31.34,50.39 39.4,50.39 27.77,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1500)
+    .add({
+      targets: '.polymorph6',
+      points: [
+        { value: '59.1,0 70.74,50.39 78.8,50.39 67.17,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1500)
+    .add({
+      targets: '.polymorph7',
+      points: [
+        { value: '90.44,0 102.08,50.39 110.14,50.39 98.51,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1500)
+    .add({
+      targets: '.polymorph8',
+      points: [
+        { value: '129.85,0 137.12,31.5 145.18,31.5 137.91,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1500);
+  }
+  </script>
+
   </body>
 </html>
