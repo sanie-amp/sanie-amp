@@ -8,22 +8,12 @@
     <title>AMP - Fairs</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/index.js"></script>
   </head>
 
   <body>
-
-    <ul class="navigation">
+    <div class="parent">
+    <!-- <ul class="navigation">
       <li class="logo-nav"><a href="#home"><img src="assets/logo_white.svg" alt=""></a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#whoweare">Who We Are</a></li>
-      <li><a href="#capabilities">Capabilities</a></li>
-      <li><a href="#clients">Clients</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <!-- <button class="collapsible"><img src="assets/logo_white.svg" alt=""></button>
-    <ul class="content">
       <li><a href="#about">About</a></li>
       <li><a href="#whoweare">Who We Are</a></li>
       <li><a href="#capabilities">Capabilities</a></li>
@@ -31,7 +21,19 @@
       <li><a href="#contact">Contact</a></li>
     </ul> -->
 
-    <ul class="page">
+    <div class="navigation" id="myTopnav">
+      <button class="collapsible" onclick="toggleMenu()"><img src="assets/logo_white.svg" alt=""></button>
+      <ul class="content" id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#whoweare">Who We Are</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">Menu</a></li> -->
+      </ul>
+    </div>
+
+    <ul class="page" id="page">
       <li>
         <h1>Dates</h1>
       </li>
@@ -81,5 +83,8 @@
       </video>
     </div>
 
+  </div>
+
+  <script src="scripts/index.js"></script>
   </body>
 </html>

@@ -98,6 +98,32 @@ h1 {
   padding-left: .3em;
 }
 
+/* .logo-nav {
+  height: auto;
+  padding: 0 0 2.5em 0;
+  margin: 0;
+  line-height: 0;
+} */
+
+/* .logo-nav:hover {
+  cursor: pointer;
+} */
+
+/* .logo-nav > a {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+} */
+
+/* .logo-nav > a:hover {
+  cursor: pointer;
+  padding: 0;
+} */
+
+/* .logo-nav > a > img {
+  height: 1.6em;
+} */
+
 /* ------------------------- collapsible nav -------------------------------- */
 
 .collapsible {
@@ -129,16 +155,11 @@ h1 {
 
 .content {
   padding: 0;
-  /* display: block; */
   max-height: 100%;
   /* position: fixed; */
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  /* transition: max-height 0.2s ease-out; */
   background-color: transparent;
-}
-
-.content li:last-child {
-  padding-bottom: 2.5rem;
 }
 
 /* ------------------------- content -------------------------------- */
@@ -234,6 +255,11 @@ video {
     flex-direction: column;
   }
 
+  .content {
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
   ul.page {
     margin-left: 2em;
     padding: 0;
@@ -242,18 +268,6 @@ video {
 
   .navigation {
     padding: 2em 2em 0 2em;
-  }
-
-  .content {
-    /* display: none; */
-    max-height: 0;
-    /* transition: max-height 0.2s ease-out; */
-  }
-
-  .content.responsive {
-    /* display: block; */
-    max-height: 40%;
-    /* transition: max-height 0.2s ease-out; */
   }
 }
 
