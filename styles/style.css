@@ -1,17 +1,53 @@
 @font-face {
-  font-family: Stabil Grotesk;
+  font-family: "Labil Grotesk";
+  src:
+    url('fonts/LabilGrotesk-Italic.otf') format('opentype'),
+    url("fonts/LabilGrotesk-Italic.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-Italic.woff") format("woff");
   font-weight: normal;
-  src:  url('fonts/LabilGroteskTrial-Light.otf') format('opentype');
-        /* url('fonts/LabilGrotesk-Regular.woff2') format('woff2'),
-        url('fonts/LabilGrotesk-Regular.woff') format('woff'); */
-       /* url('myfont.ttf') format('truetype'); */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Labil Grotesk";
+  src:
+    url('fonts/LabilGrotesk-Regular.otf') format('opentype'),
+    url("fonts/LabilGrotesk-Regular.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Labil Grotesk";
+  src:
+    url('fonts/LabilGrotesk-Light.otf') format('opentype'),
+    url("fonts/LabilGrotesk-Light.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-Light.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Labil Grotesk";
+  src:
+    url('fonts/LabilGrotesk-LightItalic.otf') format('opentype'),
+    url("fonts/LabilGrotesk-LightItalic.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-LightItalic.woff") format("woff");
+  font-weight: lighter;
+  font-style: italic;
 }
 
 /* ------------------------- base -------------------------------- */
 
 body, html {
-  font-family: Stabil Grotesk, sans-serif;
-  font-weight: normal;
+  font-family: Labil Grotesk, sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+  -webkit-font-feature-settings: "ss01" 0, "calt" 0;
+  -moz-font-feature-settings:    "ss01" 0, "calt" 0;
+  -ms-font-feature-settings:     "ss01" 0, "calt" 0;
+  font-feature-settings:         "ss01" 0, "calt" 0;
   font-size: 18px;
   line-height: 1.1;
   color: #fff;
@@ -59,8 +95,13 @@ button:focus {outline:none;}
 /* ------------------------- typography -------------------------------- */
 
 h1 {
-  font-family: Stabil Grotesk, sans-serif;
-  font-weight: normal;
+  font-family: Labil Grotesk, sans-serif;
+  -webkit-font-feature-settings: "ss01" 0, "calt" 0;
+  -moz-font-feature-settings:    "ss01" 0, "calt" 0;
+  -ms-font-feature-settings:     "ss01" 0, "calt" 0;
+  font-feature-settings:         "ss01" 0, "calt" 0;
+  font-weight: lighter;
+  font-style: normal;
   font-size: 2em;
   line-height: 1.1;
 }
