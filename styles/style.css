@@ -263,6 +263,14 @@ video {
   fill: #fff;
 }
 
+/* ------------------------- map ------------------------------- */
+
+#map {
+  width: calc(100% - 2em);
+  height: 20em;
+  margin-top: 2em;
+}
+
 /* ------------------------- queries --------------------------- */
 
 /* @media screen and (max-width:950px) {
