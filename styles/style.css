@@ -216,8 +216,8 @@ ul.page li:last-of-type {
 }
 
 video {
-  min-width: 100%;
-  height: auto;
+  min-height: 100%;
+  width: auto;
 }
 
 .video-container {
@@ -327,7 +327,7 @@ video {
 
 @media (max-aspect-ratio: 3/2) {
   video {
-    min-height: 100%;
-    width: auto;
+    min-width: 100%;
+    height: auto;
   }
 }
