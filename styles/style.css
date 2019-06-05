@@ -325,7 +325,7 @@ video {
   }
 }
 
-@media (max-aspect-ratio: 3/2) {
+@media (min-aspect-ratio: 16/9) {
   video {
     min-width: 100%;
     height: auto;
