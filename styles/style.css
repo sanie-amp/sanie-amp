@@ -48,7 +48,7 @@ body, html {
   -moz-font-feature-settings:    "ss01" 0, "calt" 0;
   -ms-font-feature-settings:     "ss01" 0, "calt" 0;
   font-feature-settings:         "ss01" 0, "calt" 0;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.1;
   color: #fff;
   height: 100%;
@@ -93,6 +93,9 @@ button:focus {outline:none;}
 }
 
 /* ------------------------- typography -------------------------------- */
+p.a {
+  font-size: 2.5em;
+}
 
 h1 {
   font-family: Labil Grotesk, sans-serif;
@@ -107,106 +110,58 @@ h1 {
 }
 
 ::selection {
-  background: #000; /* WebKit/Blink Browsers */
+  background: #fff; /* WebKit/Blink Browsers */
+  color: #000;
 }
 ::-moz-selection {
-  background: #000; /* Gecko Browsers */
+  background: #fff; /* Gecko Browsers */
+  color: #000;
+}
+
+/* ------------------------- platform -------------------------------- */
+
+.platform {
+  background-color: rgba(0, 0, 0, 1);
+    /* background-color: rgba(0, 0, 0, .7); */
+  width: calc(100% - 2em);
+  height: calc(100% - 2em);
 }
 
 /* ------------------------- navigation -------------------------------- */
-
 .navigation {
-  /* width: 20%; */
-  flex: 20%;
-  height: 100%;
-  margin: 0;
-  padding: 2em;
-  position: sticky;
-  top: 0;
-  /* position: fixed; */
-}
-
-.navigation a {
-  font-size: 1em;
-  /* padding: .1em 0; */
-  line-height: 1.2;
-  padding: 0;
-  margin: 0;
-  transition: all .3s ease-in-out;
-}
-
-.navigation a:hover {
-  padding-left: .3em;
-}
-
-/* ------------------------- collapsible nav -------------------------------- */
-
-.collapsible {
-  /* width: 40%; */
-  height: auto;
-  padding: 0 0 2.5rem 0;
-  margin: 0;
-  line-height: 0;
-}
-
-.collapsible:hover {
-  cursor: pointer;
-}
-
-.collapsible > a {
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-}
-
-.collapsible > a:hover {
-  cursor: pointer;
-  padding: 0;
-}
-
-.collapsible > img {
-  height: 1.6rem;
-}
-
-.collapsible > svg {
-  height: 1.6rem;
-}
-
-.content {
-  padding: 0;
-  /* display: block; */
-  max-height: 100%;
-  /* position: fixed; */
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  height: 6em;
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-between;
   background-color: transparent;
 }
 
-.content li:last-child {
-  padding-bottom: 2.5rem;
-}
-
-/* ------------------------- content -------------------------------- */
-
-ul.page {
-  /* margin-left: 20%; */
-  flex: 80%;
+.navigation a {
   display: block;
-  padding: 2em 0;
-  /* transition: padding-top 0.2s ease-out; */
+  float: left;
+  padding: 2em;
+  outline: 0;
 }
 
-ul.page li {
-  padding: 0 0 2em 0;
+.navigation a:hover {
+
 }
 
-ul.page li:last-of-type {
-  padding: 0;
+.navigation a:focus {
+  outline: 0;
 }
 
-.clip-fairs {
-  -webkit-clip-path: polygon(calc(60% + 12vh) 0, 100% 0%, 100% 100%, calc(60% - 12vh) 100%);
-  clip-path: polygon(calc(60% + 12vh) 0, 100% 0%, 100% 100%, calc(60% - 12vh) 100%);
+.navigation .menu {
+  display: block;
+  float: right;
+  padding: 2em;
+}
+
+.nav-logo {
+  height: 4em;
+  padding-top: 2em;
+  width: auto;
+  cursor: pointer;
 }
 
 /* ------------------------- video & clip -------------------------------- */
@@ -235,6 +190,14 @@ video {
   clip-path: polygon(calc(50% + 12vh) 0, 100% 0%, 100% 100%, calc(50% - 12vh) 100%);
 }
 
+/* ------------------------- logo ------------------------------- */
+
+.polymorph, .polymorph2, .polymorph3,
+.polymorph4, .polymorph5, .polymorph6,
+.polymorph7, .polymorph8 {
+  fill: #fff;
+}
+
 /* ------------------------- logo center ------------------------------- */
 
 .logo {
@@ -255,21 +218,6 @@ video {
   align-items: center;
 }
 
-/* ------------------------- logo center ------------------------------- */
-
-.polymorph, .polymorph2, .polymorph3,
-.polymorph4, .polymorph5, .polymorph6,
-.polymorph7, .polymorph8 {
-  fill: #fff;
-}
-
-/* ------------------------- map ------------------------------- */
-
-#map {
-  width: calc(100% - 2em);
-  height: 20em;
-  margin-top: 2em;
-}
 
 /* ------------------------- queries --------------------------- */
 
@@ -290,32 +238,6 @@ video {
 @media screen and (max-width:950px) {
   .logo {
     width: 30vw;
-  }
-
-  .parent {
-    flex-direction: column;
-  }
-
-  ul.page {
-    margin-left: 2em;
-    padding: 0 0 2em 0;
-    /* padding-top: 5.6em; */
-  }
-
-  .navigation {
-    padding: 2em 2em 0 2em;
-  }
-
-  .content {
-    /* display: none; */
-    max-height: 0;
-    /* transition: max-height 0.2s ease-out; */
-  }
-
-  .content.responsive {
-    /* display: block; */
-    max-height: 40%;
-    /* transition: max-height 0.2s ease-out; */
   }
 }
 

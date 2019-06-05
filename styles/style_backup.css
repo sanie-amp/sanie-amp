@@ -1,17 +1,53 @@
 @font-face {
-  font-family: Stabil Grotesk;
+  font-family: "Labil Grotesk";
+  src:
+    url('fonts/LabilGrotesk-Italic.otf') format('opentype'),
+    url("fonts/LabilGrotesk-Italic.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-Italic.woff") format("woff");
   font-weight: normal;
-  src:  url('fonts/LabilGroteskTrial-Light.otf') format('opentype');
-        /* url('fonts/LabilGrotesk-Regular.woff2') format('woff2'),
-        url('fonts/LabilGrotesk-Regular.woff') format('woff'); */
-       /* url('myfont.ttf') format('truetype'); */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Labil Grotesk";
+  src:
+    url('fonts/LabilGrotesk-Regular.otf') format('opentype'),
+    url("fonts/LabilGrotesk-Regular.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Labil Grotesk";
+  src:
+    url('fonts/LabilGrotesk-Light.otf') format('opentype'),
+    url("fonts/LabilGrotesk-Light.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-Light.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Labil Grotesk";
+  src:
+    url('fonts/LabilGrotesk-LightItalic.otf') format('opentype'),
+    url("fonts/LabilGrotesk-LightItalic.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-LightItalic.woff") format("woff");
+  font-weight: lighter;
+  font-style: italic;
 }
 
 /* ------------------------- base -------------------------------- */
 
 body, html {
-  font-family: Stabil Grotesk, sans-serif;
-  font-weight: normal;
+  font-family: Labil Grotesk, sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+  -webkit-font-feature-settings: "ss01" 0, "calt" 0;
+  -moz-font-feature-settings:    "ss01" 0, "calt" 0;
+  -ms-font-feature-settings:     "ss01" 0, "calt" 0;
+  font-feature-settings:         "ss01" 0, "calt" 0;
   font-size: 18px;
   line-height: 1.1;
   color: #fff;
@@ -59,17 +95,24 @@ button:focus {outline:none;}
 /* ------------------------- typography -------------------------------- */
 
 h1 {
-  font-family: Stabil Grotesk, sans-serif;
-  font-weight: normal;
+  font-family: Labil Grotesk, sans-serif;
+  -webkit-font-feature-settings: "ss01" 0, "calt" 0;
+  -moz-font-feature-settings:    "ss01" 0, "calt" 0;
+  -ms-font-feature-settings:     "ss01" 0, "calt" 0;
+  font-feature-settings:         "ss01" 0, "calt" 0;
+  font-weight: lighter;
+  font-style: normal;
   font-size: 2em;
   line-height: 1.1;
 }
 
 ::selection {
-  background: #000; /* WebKit/Blink Browsers */
+  background: #fff; /* WebKit/Blink Browsers */
+  color: #000;
 }
 ::-moz-selection {
-  background: #000; /* Gecko Browsers */
+  background: #fff; /* Gecko Browsers */
+  color: #000;
 }
 
 /* ------------------------- navigation -------------------------------- */
@@ -97,32 +140,6 @@ h1 {
 .navigation a:hover {
   padding-left: .3em;
 }
-
-/* .logo-nav {
-  height: auto;
-  padding: 0 0 2.5em 0;
-  margin: 0;
-  line-height: 0;
-} */
-
-/* .logo-nav:hover {
-  cursor: pointer;
-} */
-
-/* .logo-nav > a {
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-} */
-
-/* .logo-nav > a:hover {
-  cursor: pointer;
-  padding: 0;
-} */
-
-/* .logo-nav > a > img {
-  height: 1.6em;
-} */
 
 /* ------------------------- collapsible nav -------------------------------- */
 
@@ -153,13 +170,22 @@ h1 {
   height: 1.6rem;
 }
 
+.collapsible > svg {
+  height: 1.6rem;
+}
+
 .content {
   padding: 0;
+  /* display: block; */
   max-height: 100%;
   /* position: fixed; */
   overflow: hidden;
-  /* transition: max-height 0.2s ease-out; */
+  transition: max-height 0.2s ease-out;
   background-color: transparent;
+}
+
+.content li:last-child {
+  padding-bottom: 2.5rem;
 }
 
 /* ------------------------- content -------------------------------- */
@@ -192,8 +218,8 @@ ul.page li:last-of-type {
 }
 
 video {
-  min-width: 100%;
-  height: auto;
+  min-height: 100%;
+  width: auto;
 }
 
 .video-container {
@@ -218,6 +244,7 @@ video {
   width: 15vw;
   height: auto;
   align-self: center;
+  cursor: pointer;
 }
 
 
@@ -228,6 +255,22 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ------------------------- logo center ------------------------------- */
+
+.polymorph, .polymorph2, .polymorph3,
+.polymorph4, .polymorph5, .polymorph6,
+.polymorph7, .polymorph8 {
+  fill: #fff;
+}
+
+/* ------------------------- map ------------------------------- */
+
+#map {
+  width: calc(100% - 2em);
+  height: 20em;
+  margin-top: 2em;
 }
 
 /* ------------------------- queries --------------------------- */
@@ -255,19 +298,26 @@ video {
     flex-direction: column;
   }
 
-  .content {
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-  }
-
   ul.page {
     margin-left: 2em;
-    padding: 0;
+    padding: 0 0 2em 0;
     /* padding-top: 5.6em; */
   }
 
   .navigation {
     padding: 2em 2em 0 2em;
+  }
+
+  .content {
+    /* display: none; */
+    max-height: 0;
+    /* transition: max-height 0.2s ease-out; */
+  }
+
+  .content.responsive {
+    /* display: block; */
+    max-height: 40%;
+    /* transition: max-height 0.2s ease-out; */
   }
 }
 
@@ -277,9 +327,9 @@ video {
   }
 }
 
-@media (max-aspect-ratio: 3/2) {
+@media (min-aspect-ratio: 16/9) {
   video {
-    min-height: 100%;
-    width: auto;
+    min-width: 100%;
+    height: auto;
   }
 }
