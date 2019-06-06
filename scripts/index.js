@@ -21,3 +21,7 @@
 // var y = window.matchMedia("(max-width: 950px)")
 // mediaQuery(y) // Call listener function at run time
 // y.addListener(mediaQuery) // Attach listener function on state changes
+
+function delay (URL) {
+    setTimeout( function() { window.location = URL }, 900 );
+}
