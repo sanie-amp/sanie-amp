@@ -105,10 +105,30 @@ h1 {
   line-height: 1.1;
 }
 
+p.b, p.c {
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+p.b {
+  white-space: pre-line;
+  padding-bottom: .7em;
+}
+
+p.c {
+  padding-top: .7em;
+}
+
 p.a {
-  font-size: 2.5em;
+  font-size: 3.5em;
   text-align: center;
   hyphens: auto;
+  position: relative;
+  top: 25%;
+  max-width: 80%;
+  margin: auto;
 }
 
 ::selection {
@@ -124,22 +144,39 @@ p.a {
 
 .platform {
   background-color: rgba(0, 0, 0, 1);
-    /* background-color: rgba(0, 0, 0, .7); */
   width: calc(100% - 2em);
   height: calc(100% - 2em);
+  /* height: 0; */
+  transition: height 0.2s ease-out;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; */
 }
 
 /* ------------------------- navigation -------------------------------- */
 .navigation {
-  height: 6em;
+  width: 100%;
+  height: 5em;
+  padding: 0 7em 0 7em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 5;
 }
 
 .navigation a {
+  min-width: 6em;
+  text-align: left;
+  line-height: 1;
+}
 
+.navigation a.menu {
+  text-align: right;
 }
 
 .navigation li {
-
+  line-height: 0;
 }
 
 .navigation a:hover {
@@ -150,13 +187,171 @@ p.a {
   outline: 0;
 }
 
-.navigation a.menu {
-
+.nav-logo {
+  height: 2em;
+  width: auto;
+  cursor: pointer;
+  line-height: 1;
 }
 
-.nav-logo {
-  height: 4em;
-  cursor: pointer;
+/* ------------------------- menu -------------------------------- */
+.menu:hover {
+  color: #555;
+}
+
+.overlay {
+  height: 0%;
+
+  position: fixed;
+  top: 6em;
+  right: 1em;
+  width: calc(100% - 2em);
+
+  z-index: 1;
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  padding: 0;
+  margin: 0;
+  /* line-height: 0; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-content {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 5em;
+}
+
+.overlay-content > a {
+  text-align: center;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+/* ------------------------- activities -------------------------------- */
+
+.act-overlay {
+  height: 0%;
+
+  position: fixed;
+  top: 6em;
+  right: 1em;
+  width: calc(100% - 2em);
+
+  z-index: 1;
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  padding: 0;
+  margin: 0;
+}
+
+.act-overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  padding: 0 7em 0 7em;
+}
+
+.slick-slide {
+  height: 100%;
+  line-height: 1;
+}
+
+.slick-slide img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* ------------------------- profile -------------------------------- */
+
+.pro-overlay {
+  height: 0%;
+
+  position: fixed;
+  top: 6em;
+  right: 1em;
+  width: calc(100% - 2em);
+
+  z-index: 1;
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.pro-overlay-content {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 0 7em 0 7em;
+
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column-1, .column-2 {
+  flex-basis: 45%;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.column-1 > p, .column-2 > p {
+  padding: 0 0 1em 0;
+}
+
+/* ------------------------- contact -------------------------------- */
+
+.con-overlay {
+  height: 0%;
+
+  position: fixed;
+  top: 6em;
+  right: 1em;
+  width: calc(100% - 2em);
+
+  z-index: 1;
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.con-overlay-content {
+  width: 100%;
+  padding-bottom: 5em;
+  text-align: center;
+}
+
+.con-overlay-content > p {
+  text-align: center;
+  font-size: 3.5em;
+  line-height: 1;
+}
+
+/* ------------------------- main text -------------------------------- */
+.text {
+  max-width: 100%;
+  height: calc(100% - 5em);
 }
 
 /* ------------------------- video & clip -------------------------------- */

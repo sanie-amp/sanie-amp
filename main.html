@@ -8,16 +8,19 @@
     <title>AMP</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <!-- Slick: -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <!-- Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="styles/carousel.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
   </head>
 
   <body>
 
     <div class="flex-container">
-      <div class="platform">
 
-        <ul class="navigation">
-          <li><a href="#activities">Activities</a></li>
-          <li><svg class="nav-logo" id="logo" viewBox="0 0 145.18 50.39">
+        <!-- <a>
+          <svg class="logo" id="logo-main" onclick="openPlatform()" viewBox="0 0 145.18 50.39">
             <polygon class="polymorph" points="11.63,0 0,50.39 8.06,50.39 19.7,0 "/>
             <polygon class="polymorph2" points="51.02,0 39.39,50.39 47.45,50.39 59.09,0 "/>
             <polygon class="polymorph3" points="82.36,0 70.73,50.39 78.79,50.39 90.43,0 "/>
@@ -26,15 +29,114 @@
             <polygon class="polymorph6" points="59.1,0 70.74,50.39 78.8,50.39 67.17,0 "/>
             <polygon class="polymorph5" points="19.7,0 31.34,50.39 39.4,50.39 27.77,0 "/>
             <polygon class="polymorph8" points="129.85,0 137.12,31.5 145.18,31.5 137.91,0 "/>
-          </svg></li>
-          <li><a class="menu" href="#menu">&rarr;</a></li>
+          </svg>
+        </a> -->
+
+      <div id="platform" class="platform">
+
+        <ul class="navigation">
+          <li><a href="#activities">Activities</a></li>
+          <li>
+            <svg class="nav-logo" id="logo" viewBox="0 0 145.18 50.39">
+              <polygon class="polymorph" points="11.63,0 0,50.39 8.06,50.39 19.7,0 "/>
+              <polygon class="polymorph2" points="51.02,0 39.39,50.39 47.45,50.39 59.09,0 "/>
+              <polygon class="polymorph3" points="82.36,0 70.73,50.39 78.79,50.39 90.43,0 "/>
+              <polygon class="polymorph4" points="121.77,0 110.14,50.39 118.2,50.39 129.83,0 "/>
+              <polygon class="polymorph7" points="90.44,0 102.08,50.39 110.14,50.39 98.51,0 "/>
+              <polygon class="polymorph6" points="59.1,0 70.74,50.39 78.8,50.39 67.17,0 "/>
+              <polygon class="polymorph5" points="19.7,0 31.34,50.39 39.4,50.39 27.77,0 "/>
+              <polygon class="polymorph8" points="129.85,0 137.12,31.5 145.18,31.5 137.91,0 "/>
+            </svg>
+          </li>
+          <li>
+            <a class="menu" href="#menu" onclick="openNav()">&rarr;</a>
+            <div id="menu" class="overlay">
+              <div class="overlay-content">
+                <a onclick="openAct()" href="#activities">Activities</a>
+                <a onclick="openPro()" href="#profile">Profile</a>
+                <a onclick="openCon()" href="#contact">Contact</a>
+                <a href="#">Instagram</a>
+              </div>
+            </div>
+          </li>
+
         </ul>
 
-        <div class="main-container">
-          <div class="text">
-            <p class="a">Art Market Productions is now AMP. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
+        <div id="act-overlay" class="act-overlay">
+          <div class="act-overlay-content">
+            <div class="carousel">
+              <div>
+                <p class="b">Event number one
+                  June 20—24
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">Art Market Productions is now AMP. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed.</p>
+              </div>
+              <div>
+                <p class="b">Event number two
+                  June 20—24
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">Art Market Productions is now AMP. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
+              </div>
+              <div class="third">
+                <p class="b">Event number three
+                  June 20—24
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">Art Market Productions is now AMP. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly.</p>
+              </div>
+              <div><p>your content</p></div>
+              <div><p>your content</p></div>
+              <div><p>your content</p></div>
+            </div>
           </div>
         </div>
+
+        <div id="pro-overlay" class="pro-overlay">
+          <div class="pro-overlay-content">
+            <div class="column-1">
+              <p>About us and our services</p>
+              <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
+              <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly,
+                slightly domed and divided by arches into stiff sections.
+                The bedding was hardly able to cover it and seemed ready to slide off any moment.
+              </p>
+              <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.
+              &quot;What's happened to me&quot; he thought. It wasn't a dream.
+              </p>
+            </div>
+            <div class="column-2">
+              <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+                A collection of textile samples lay spread out on the table - Samsa was a travelling salesman -
+                and above it there hung a picture that he had re-cently cut out of an illustrated magazine and housed in a nice, gilded frame.
+                It showed a lady fitted out with a fur hat and fur boa who sat up-right, raising a heavy fur muff that covered the whole of
+                her lower arm towards the viewer.
+                Gregor then turned to look out the window at the dull weather.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="con-overlay" class="con-overlay">
+          <div class="con-overlay-content">
+            <p>Studio:</p>
+            <p>361 Stagg Street</p>
+            <p>Suite 407</p>
+            <p>Brooklyn, New York, 11206</p>
+            <p>212 – 518 – 6912</p>
+            <p>hello@amp.events</p>
+          </div>
+        </div>
+
+        <!-- <div class="main-container"> -->
+          <div class="text">
+            <p class="a">Art Market Productions is now AMP.
+              One morning, when Gregor Samsa woke from troubled dreams,
+              he found himself transformed in his bed into a horrible vermin.
+            </p>
+          </div>
+        <!-- </div> -->
 
       </div>
     </div>
@@ -53,9 +155,13 @@
     </div>
 
   <!-- Animation -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="scripts/index.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="scripts/anime.min.js"></script>
   <script>
     var btn = document.getElementById('logo');
+    // var btn = document.getElementsByClassName('nav-logo')[0];
 
     var tl = anime.timeline({
       easing: 'easeInExpo',

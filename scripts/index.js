@@ -22,6 +22,140 @@
 // mediaQuery(y) // Call listener function at run time
 // y.addListener(mediaQuery) // Attach listener function on state changes
 
-function delay (URL) {
-    setTimeout( function() { window.location = URL }, 900 );
+// ------------------------------ Link Delay -----------------------------------------
+// function delay (URL) {
+//     setTimeout( function() { window.location = URL }, 900 );
+// }
+
+// ------------------------------ Platform -----------------------------------------
+
+// var coll = document.getElementsByClassName("platform")[0];
+// var i;
+// var logo = document.getElementById("test");
+//
+//   logo.addEventListener("click", function() {
+//     // this.classList.toggle("active");
+//     if (coll.style.height){
+//       coll.style.height = null;
+//     } else {
+//       coll.style.height = "calc(100% - 2em)";
+//     }
+//   });
+
+// ------------------------------ Showing/Hiding divs -----------------------------------------
+
+var url = window.location.href;
+// Check if URL contains the keyword
+if( url.search( 'profile' ) > -1 ) {
+  console.log("Pro");
+  openPro();
+} else if( url.search( 'activities' ) > -1 ) {
+  console.log("Act!");
+  openAct();
+} else if( url.search( 'contact' ) > -1 ) {
+  console.log("Contact!");
+  openCon();
+} else if( url.search( 'menu' ) > -1 ) {
+  console.log("Menu!");
+  openNav();
 }
+
+function openNav() {
+  document.getElementById("menu").style.height = "calc(100% - 7em)";
+  document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementById("act-overlay").style.height = "0";
+  document.getElementById("pro-overlay").style.height = "0";
+  document.getElementById("con-overlay").style.height = "0";
+}
+
+function openAct() {
+  document.getElementById("act-overlay").style.height = "calc(100% - 7em)";
+  document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementById("menu").style.height = "0";
+  document.getElementById("pro-overlay").style.height = "0";
+  document.getElementById("con-overlay").style.height = "0";
+}
+
+function openPro() {
+  document.getElementById("act-overlay").style.height = "0";
+  document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementById("menu").style.height = "0";
+  document.getElementById("pro-overlay").style.height = "calc(100% - 7em)";
+  document.getElementById("con-overlay").style.height = "0";
+}
+
+function openCon() {
+  document.getElementById("act-overlay").style.height = "0";
+  document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementById("menu").style.height = "0";
+  document.getElementById("pro-overlay").style.height = "0";
+  document.getElementById("con-overlay").style.height = "calc(100% - 7em)";
+}
+
+function openPlatform() {
+  document.getElementById("platform").style.height = "calc(100% - 2em)";
+  document.getElementById("logo-main").style.display = "none";
+}
+
+// ------------------------------ Activities -----------------------------------------
+
+// var slideIndex = 1;
+// showDivs(slideIndex);
+//
+// function plusDivs(n) {
+//   showDivs(slideIndex += n);
+// }
+//
+// function showDivs(n) {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   if (n > x.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//   }
+//   x[slideIndex-1].style.display = "block";
+// }
+
+// Initialize your slider in your script file or an inline script tag
+$(document).ready(function(){
+  // $('.carousel').slick({
+  //
+  // });
+
+    $('.carousel').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+});
