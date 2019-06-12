@@ -58,11 +58,15 @@ if( url.search( 'profile' ) > -1 ) {
 } else if( url.search( 'menu' ) > -1 ) {
   console.log("Menu!");
   openNav();
+} else {
+  console.log("Main!");
+  openText();
 }
 
 function openNav() {
   document.getElementById("menu").style.height = "calc(100% - 7em)";
-  document.getElementsByClassName("text")[0].style.display = "none";
+  // document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementById("text-overlay").style.height = "0";
   document.getElementById("act-overlay").style.height = "0";
   document.getElementById("pro-overlay").style.height = "0";
   document.getElementById("con-overlay").style.height = "0";
@@ -70,7 +74,8 @@ function openNav() {
 
 function openAct() {
   document.getElementById("act-overlay").style.height = "calc(100% - 7em)";
-  document.getElementsByClassName("text")[0].style.display = "none";
+  // document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementById("text-overlay").style.height = "0";
   document.getElementById("menu").style.height = "0";
   document.getElementById("pro-overlay").style.height = "0";
   document.getElementById("con-overlay").style.height = "0";
@@ -78,7 +83,8 @@ function openAct() {
 
 function openPro() {
   document.getElementById("act-overlay").style.height = "0";
-  document.getElementsByClassName("text")[0].style.display = "none";
+  // document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementById("text-overlay").style.height = "0";
   document.getElementById("menu").style.height = "0";
   document.getElementById("pro-overlay").style.height = "calc(100% - 7em)";
   document.getElementById("con-overlay").style.height = "0";
@@ -86,10 +92,20 @@ function openPro() {
 
 function openCon() {
   document.getElementById("act-overlay").style.height = "0";
-  document.getElementsByClassName("text")[0].style.display = "none";
+  // document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementById("text-overlay").style.height = "0";
   document.getElementById("menu").style.height = "0";
   document.getElementById("pro-overlay").style.height = "0";
   document.getElementById("con-overlay").style.height = "calc(100% - 7em)";
+}
+
+function openText() {
+  document.getElementById("act-overlay").style.height = "0";
+  // document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementById("text-overlay").style.height = "calc(100% - 7em)";
+  document.getElementById("menu").style.height = "0";
+  document.getElementById("pro-overlay").style.height = "0";
+  document.getElementById("con-overlay").style.height = "0";
 }
 
 function openPlatform() {
@@ -133,17 +149,17 @@ $(document).ready(function(){
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       },
       {
