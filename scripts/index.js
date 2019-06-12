@@ -65,7 +65,7 @@ if( url.search( 'profile' ) > -1 ) {
 
 function openNav() {
   document.getElementById("menu").style.height = "calc(100% - 7em)";
-  // document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementsByClassName("menu-close")[0].style.display = "block";
   document.getElementById("text-overlay").style.height = "0";
   document.getElementById("act-overlay").style.height = "0";
   document.getElementById("pro-overlay").style.height = "0";
@@ -74,7 +74,7 @@ function openNav() {
 
 function openAct() {
   document.getElementById("act-overlay").style.height = "calc(100% - 7em)";
-  // document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementsByClassName("menu-close")[0].style.display = "none";
   document.getElementById("text-overlay").style.height = "0";
   document.getElementById("menu").style.height = "0";
   document.getElementById("pro-overlay").style.height = "0";
@@ -83,7 +83,7 @@ function openAct() {
 
 function openPro() {
   document.getElementById("act-overlay").style.height = "0";
-  // document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementsByClassName("menu-close")[0].style.display = "none";
   document.getElementById("text-overlay").style.height = "0";
   document.getElementById("menu").style.height = "0";
   document.getElementById("pro-overlay").style.height = "calc(100% - 7em)";
@@ -92,7 +92,7 @@ function openPro() {
 
 function openCon() {
   document.getElementById("act-overlay").style.height = "0";
-  // document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementsByClassName("menu-close")[0].style.display = "none";
   document.getElementById("text-overlay").style.height = "0";
   document.getElementById("menu").style.height = "0";
   document.getElementById("pro-overlay").style.height = "0";
@@ -101,7 +101,7 @@ function openCon() {
 
 function openText() {
   document.getElementById("act-overlay").style.height = "0";
-  // document.getElementsByClassName("text")[0].style.display = "none";
+  document.getElementsByClassName("menu-close")[0].style.display = "none";
   document.getElementById("text-overlay").style.height = "calc(100% - 7em)";
   document.getElementById("menu").style.height = "0";
   document.getElementById("pro-overlay").style.height = "0";

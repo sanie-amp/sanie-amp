@@ -228,6 +228,7 @@ p.c {
   /* line-height: 0; */
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -244,6 +245,24 @@ p.c {
   text-align: center;
 }
 
+.menu-close {
+  width: calc(100% - 2em);
+  position: absolute;
+  top: calc(100% - 8rem);
+  height: 2em;
+  text-align: center;
+  color: white;
+  z-index: 5;
+}
+
+a.close {
+  font-family: Icons, sans-serif;
+  text-align: center;
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
 /* ------------------------- activities -------------------------------- */
 
 .act-overlay {
@@ -257,7 +276,7 @@ p.c {
   z-index: 1;
   background-color: rgba(0,0,0, 0.9);
   overflow-y: hidden;
-  transition: 0.5s;
+  /* transition: 0.5s; */
   padding: 0;
   margin: 0;
 }

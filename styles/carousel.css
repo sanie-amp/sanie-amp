@@ -8,11 +8,11 @@
     -moz-font-feature-settings:    "ss01" 0, "calt" 0;
     -ms-font-feature-settings:     "ss01" 0, "calt" 0;
     font-feature-settings:         "ss01" 0, "calt" 0;
-    font-size: 2.2em;
+    font-size: 2.2rem;
     line-height: 1;
 
     position: absolute;
-    top: 82%;
+    top: calc(100% - 8rem);
 
     display: block;
 
@@ -32,11 +32,11 @@
 }
 
 .slick-prev {
-  right: calc(50% + .2em);
+  right: calc(50% + 1rem);
 }
 
 .slick-next {
-  right: calc(50% - 1.2em);
+  right: calc(50% - 2rem);
 }
 
 .carousel {
