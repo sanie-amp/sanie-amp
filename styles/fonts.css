@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Labil Grotesk";
+  src:
+    url('fonts/LabilGrotesk-Light.otf') format('opentype'),
+    url("fonts/LabilGrotesk-Light.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-Light.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Labil Grotesk";
+  src:
+    url('fonts/LabilGrotesk-LightItalic.otf') format('opentype'),
+    url("fonts/LabilGrotesk-LightItalic.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-LightItalic.woff") format("woff");
+  font-style: italic;
+}
