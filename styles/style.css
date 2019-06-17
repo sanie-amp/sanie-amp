@@ -116,6 +116,10 @@ h1 {
   line-height: 1.1;
 }
 
+p.d {
+  font-size: 1em;
+}
+
 p.a {
   font-size: 3.5em;
   text-align: center;
@@ -154,9 +158,9 @@ p.c {
 /* ------------------------- platform -------------------------------- */
 
 .platform {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.5);
   width: calc(100% - 2em);
-  height: calc(100% - 2em);
+  min-height: calc(100% - 2em);
   /* height: 0; */
   transition: height 0.2s ease-out;
   /* display: flex;
@@ -176,7 +180,8 @@ p.c {
   z-index: 5;
 }
 
-.navigation a {
+.navigation a,
+.navigation p {
   min-width: 6em;
   text-align: left;
   line-height: 1;
@@ -220,7 +225,7 @@ p.c {
   width: calc(100% - 2em);
 
   z-index: 1;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0,0,0, 0);
   overflow-y: hidden;
   transition: 0.5s;
   padding: 0;
@@ -274,9 +279,9 @@ a.close {
   width: calc(100% - 2em);
 
   z-index: 1;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0,0,0, 0);
   overflow-y: hidden;
-  /* transition: 0.5s; */
+  transition: 0.5s;
   padding: 0;
   margin: 0;
 }
@@ -293,15 +298,15 @@ a.close {
 .pro-overlay {
   height: 0%;
 
-  position: fixed;
-  top: 6em;
+  /* position: relative; */
+  /* top: 6em;
   right: 1em;
-  width: calc(100% - 2em);
+  width: calc(100% - 2em); */
 
   z-index: 1;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(255,0,0, 0);
   overflow-y: hidden;
-  transition: 0.5s;
+  /* transition: 0.5s; */
   padding: 0;
   margin: 0;
   line-height: 1;
@@ -309,18 +314,18 @@ a.close {
 
 .pro-overlay-content {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   text-align: left;
   padding: 0 7em 0 7em;
 
   display: flex;
-  /* flex-direction: row; */
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 .column-1, .column-2 {
-  flex-basis: 45%;
+  flex-basis: 47%;
   font-size: 1.5em;
   line-height: 1;
 }
@@ -340,7 +345,7 @@ a.close {
   width: calc(100% - 2em);
 
   z-index: 1;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0,0,0, 0);
   overflow-y: hidden;
   transition: 0.5s;
   padding: 0;
@@ -374,9 +379,9 @@ a.close {
   width: calc(100% - 2em);
 
   z-index: 1;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0,0,0, 0);
   overflow-y: hidden;
-  transition: 0.5s;
+  /* transition: 0.5s; */
   padding: 0;
   margin: 0;
   line-height: 1;
@@ -461,6 +466,80 @@ video {
     flex: 70%;
   }
 } */
+@media screen and (max-width:1450px) {
+  .logo {
+    /* width: 30vw; */
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  .pro-overlay-content {
+    padding: 15vh 7em 0 7em;
+  }
+}
+
+@media screen and (max-width:1250px) {
+  .logo {
+    /* width: 30vw; */
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+
+  .pro-overlay-content {
+    padding: 15vh 7em 0 7em;
+  }
+}
+
+@media screen and (max-width:1150px) {
+  .logo {
+    /* width: 30vw; */
+  }
+
+  /* ------------------------- profile ------------------------------- */
+
+  p {
+    font-size: 0.8em;
+  }
+
+  .column-1, .column-2 {
+    flex-basis: 20%;
+    height: auto;
+    line-height: 1;
+  }
+
+  .pro-overlay-content {
+    padding: 2em 7em 1em 7em;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width:840px) {
+  /* ------------------------- super things ------------------------------- */
+  .flex-container {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  body {
+    overflow: scroll;
+  }
+
+  .platform {
+    width: 100%;
+    min-height: 100%;
+    margin: 1em;
+  }
+}
 
 @media screen and (max-width:950px) {
   .logo {

@@ -70,33 +70,47 @@ function openNav() {
   document.getElementById("act-overlay").style.height = "0";
   document.getElementById("pro-overlay").style.height = "0";
   document.getElementById("con-overlay").style.height = "0";
+
+  document.getElementById("current").textContent="";
 }
 
 function openAct() {
-  document.getElementById("act-overlay").style.height = "calc(100% - 7em)";
   document.getElementsByClassName("menu-close")[0].style.display = "none";
-  document.getElementById("text-overlay").style.height = "0";
   document.getElementById("menu").style.height = "0";
-  document.getElementById("pro-overlay").style.height = "0";
-  document.getElementById("con-overlay").style.height = "0";
+  setTimeout(function(){
+    document.getElementById("act-overlay").style.height = "calc(100% - 7em)";
+    document.getElementById("text-overlay").style.height = "0";
+    document.getElementById("pro-overlay").style.height = "0";
+    document.getElementById("con-overlay").style.height = "0";
+
+    document.getElementById("current").textContent="Activities";
+  }, 500);
 }
 
 function openPro() {
-  document.getElementById("act-overlay").style.height = "0";
   document.getElementsByClassName("menu-close")[0].style.display = "none";
-  document.getElementById("text-overlay").style.height = "0";
   document.getElementById("menu").style.height = "0";
-  document.getElementById("pro-overlay").style.height = "calc(100% - 7em)";
-  document.getElementById("con-overlay").style.height = "0";
+  // setTimeout(function(){
+    document.getElementById("act-overlay").style.height = "0";
+    document.getElementById("text-overlay").style.height = "0";
+    document.getElementById("pro-overlay").style.height = "calc(100% - 7em)";
+    document.getElementById("con-overlay").style.height = "0";
+
+    document.getElementById("current").textContent="Profile";
+  // }, 500);
 }
 
 function openCon() {
-  document.getElementById("act-overlay").style.height = "0";
   document.getElementsByClassName("menu-close")[0].style.display = "none";
-  document.getElementById("text-overlay").style.height = "0";
   document.getElementById("menu").style.height = "0";
-  document.getElementById("pro-overlay").style.height = "0";
-  document.getElementById("con-overlay").style.height = "calc(100% - 7em)";
+  setTimeout(function(){
+    document.getElementById("act-overlay").style.height = "0";
+    document.getElementById("text-overlay").style.height = "0";
+    document.getElementById("pro-overlay").style.height = "0";
+    document.getElementById("con-overlay").style.height = "calc(100% - 7em)";
+
+    document.getElementById("current").textContent="Contact";
+  }, 500);
 }
 
 function openText() {
@@ -106,6 +120,8 @@ function openText() {
   document.getElementById("menu").style.height = "0";
   document.getElementById("pro-overlay").style.height = "0";
   document.getElementById("con-overlay").style.height = "0";
+
+  document.getElementById("current").textContent="";
 }
 
 function openPlatform() {
