@@ -121,7 +121,7 @@ p.d {
 }
 
 p.a {
-  font-size: 3.5em;
+  font-size: 3em;
   text-align: center;
   hyphens: auto;
   position: relative;
@@ -133,8 +133,12 @@ p.a {
 p.b, p.c {
   font-weight: lighter;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 1.2rem;
   line-height: 1;
+}
+
+p.e {
+  font-size: 1.2rem;
 }
 
 p.b {
@@ -158,7 +162,7 @@ p.c {
 /* ------------------------- platform -------------------------------- */
 
 .platform {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   width: calc(100% - 2em);
   min-height: calc(100% - 2em);
   /* height: 0; */
@@ -178,6 +182,18 @@ p.c {
   align-items: flex-end;
   justify-content: space-between;
   z-index: 5;
+}
+
+.navigation-for-logo {
+  width: calc(100% - 2em);
+  height: 5em;
+  padding: 0 7em 0 7em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+  position: fixed;
+  top: 1em;
 }
 
 .navigation a,
@@ -288,9 +304,26 @@ a.close {
 
 .act-overlay-content {
   position: relative;
-  padding-top: 5em;
+  padding: 2em 7em 0 7em;
   height: 100%;
   width: 100%;
+}
+
+.stories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stories div {
+  flex-basis: 30%;
+}
+
+.stories img {
+  /* height: 100%; */
+  max-width: 100%;
 }
 
 /* ------------------------- profile -------------------------------- */
@@ -298,7 +331,7 @@ a.close {
 .pro-overlay {
   height: 0%;
 
-  /* position: relative; */
+  position: fixed;
   /* top: 6em;
   right: 1em;
   width: calc(100% - 2em); */
@@ -316,7 +349,7 @@ a.close {
   width: 100%;
   /* height: 100%; */
   text-align: left;
-  padding: 0 7em 0 7em;
+  padding: 3em 7em 0 7em;
 
   display: flex;
   flex-direction: row;
@@ -365,7 +398,7 @@ a.close {
 
 .con-overlay-content > p {
   text-align: center;
-  font-size: 3.5em;
+  font-size: 3em;
   line-height: 1;
 }
 
@@ -466,17 +499,18 @@ video {
     flex: 70%;
   }
 } */
+
 @media screen and (max-width:1450px) {
   .logo {
     /* width: 30vw; */
   }
 
   p {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   .pro-overlay-content {
-    padding: 15vh 7em 0 7em;
+    padding: 2em 7em 0 7em;
   }
 }
 
@@ -485,12 +519,12 @@ video {
     /* width: 30vw; */
   }
 
-  p {
+  p.e {
     font-size: 0.8em;
   }
 
   .pro-overlay-content {
-    padding: 15vh 7em 0 7em;
+    padding: 2em 7em 0 7em;
   }
 }
 
@@ -502,7 +536,11 @@ video {
   /* ------------------------- profile ------------------------------- */
 
   p {
-    font-size: 0.8em;
+    font-size: 1em;
+  }
+
+  p.a {
+    font-size: 2.5em;
   }
 
   .column-1, .column-2 {
@@ -511,17 +549,65 @@ video {
     line-height: 1;
   }
 
+  .pro-overlay {
+    position: static;
+  }
+
   .pro-overlay-content {
     padding: 2em 7em 1em 7em;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
   }
+
+  .flex-container {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  body {
+    overflow: scroll;
+  }
+
+  .platform {
+    /* width: 100%; */
+    /* min-height: 100%; */
+    margin: 1em;
+  }
+
+  .act-overlay {
+    position: static;
+    width: 100%;
+  }
+
+  .stories div {
+    flex-basis: 48%;
+    padding-bottom: 2em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navigation,
+  .navigation-for-logo {
+    padding: 0 4em 0 4em;
+  }
+
+  .act-overlay-content {
+    padding: 2em 4em 0 4em;
+  }
+
+  .pro-overlay-content {
+    padding: 2em 4em 2em 4em;
+  }
 }
 
 @media screen and (max-width:840px) {
   /* ------------------------- super things ------------------------------- */
-  .flex-container {
+  /* .flex-container {
     width: 100%;
     height: 100%;
     overflow: visible;
@@ -538,6 +624,55 @@ video {
     width: 100%;
     min-height: 100%;
     margin: 1em;
+  } */
+
+  .stories div {
+    flex-basis: 100%;
+    padding-bottom: 1.5em;
+  }
+
+  .stories > div:last-child {
+    padding-bottom: 3em;
+  }
+
+  p.a {
+    font-size: 2em;
+  }
+
+  /* ------------------------- navigation ------------------------------- */
+  .navigation,
+  .navigation-for-logo {
+    height: 2em;
+    padding: 0 1em 0 1em;
+  }
+
+  .navigation a,
+  .navigation p {
+    min-width: 2em;
+  }
+
+  p.d {
+    font-size: .9rem;
+  }
+
+  .nav-logo {
+    height: 1.5em;
+    width: auto;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* ------------------------- overlay ------------------------------- */
+  .act-overlay-content {
+    padding: 1em 1em 0 1em;
+  }
+
+  .stories > div:last-child {
+    padding-bottom: 1em;
+  }
+
+  .pro-overlay-content {
+    padding: 1em 1em 1em 1em;
   }
 }
 

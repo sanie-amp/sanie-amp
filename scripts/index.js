@@ -23,9 +23,9 @@
 // y.addListener(mediaQuery) // Attach listener function on state changes
 
 // ------------------------------ Link Delay -----------------------------------------
-// function delay (URL) {
-//     setTimeout( function() { window.location = URL }, 900 );
-// }
+function delay (URL) {
+    setTimeout( function() { window.location = URL }, 900 );
+}
 
 // ------------------------------ Platform -----------------------------------------
 
@@ -90,14 +90,14 @@ function openAct() {
 function openPro() {
   document.getElementsByClassName("menu-close")[0].style.display = "none";
   document.getElementById("menu").style.height = "0";
-  // setTimeout(function(){
+  setTimeout(function(){
     document.getElementById("act-overlay").style.height = "0";
     document.getElementById("text-overlay").style.height = "0";
     document.getElementById("pro-overlay").style.height = "calc(100% - 7em)";
     document.getElementById("con-overlay").style.height = "0";
 
     document.getElementById("current").textContent="Profile";
-  // }, 500);
+  }, 500);
 }
 
 function openCon() {
@@ -114,14 +114,16 @@ function openCon() {
 }
 
 function openText() {
-  document.getElementById("act-overlay").style.height = "0";
-  document.getElementsByClassName("menu-close")[0].style.display = "none";
-  document.getElementById("text-overlay").style.height = "calc(100% - 7em)";
-  document.getElementById("menu").style.height = "0";
-  document.getElementById("pro-overlay").style.height = "0";
-  document.getElementById("con-overlay").style.height = "0";
+    document.getElementsByClassName("menu-close")[0].style.display = "none";
+    document.getElementById("menu").style.height = "0";
+    setTimeout(function(){
+      document.getElementById("act-overlay").style.height = "0";
+      document.getElementById("text-overlay").style.height = "calc(100% - 7em)";
+      document.getElementById("pro-overlay").style.height = "0";
+      document.getElementById("con-overlay").style.height = "0";
 
-  document.getElementById("current").textContent="";
+      document.getElementById("current").textContent="";
+    }, 500);
 }
 
 function openPlatform() {
@@ -163,7 +165,7 @@ $(document).ready(function(){
     slidesToScroll: 3,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -172,7 +174,7 @@ $(document).ready(function(){
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1

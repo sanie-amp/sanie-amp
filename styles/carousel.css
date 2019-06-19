@@ -55,3 +55,12 @@
   max-width: 100%;
   max-height: 100%;
 }
+
+@media screen and (max-width:1200px) {
+  .slick-prev,
+  .slick-next
+  {
+    position: fixed;
+    /* top: calc(100% - 8rem); */
+  }
+}
