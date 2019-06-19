@@ -23,9 +23,9 @@
 // y.addListener(mediaQuery) // Attach listener function on state changes
 
 // ------------------------------ Link Delay -----------------------------------------
-function delay (URL) {
-    setTimeout( function() { window.location = URL }, 900 );
-}
+// function delay (URL) {
+//     setTimeout( function() { window.location = URL }, 900 );
+// }
 
 // ------------------------------ Platform -----------------------------------------
 
@@ -77,52 +77,48 @@ function openNav() {
 function openAct() {
   document.getElementsByClassName("menu-close")[0].style.display = "none";
   document.getElementById("menu").style.height = "0";
+  document.getElementById("current").textContent="Activities";
   setTimeout(function(){
     document.getElementById("act-overlay").style.height = "calc(100% - 7em)";
     document.getElementById("text-overlay").style.height = "0";
     document.getElementById("pro-overlay").style.height = "0";
     document.getElementById("con-overlay").style.height = "0";
-
-    document.getElementById("current").textContent="Activities";
   }, 500);
 }
 
 function openPro() {
   document.getElementsByClassName("menu-close")[0].style.display = "none";
   document.getElementById("menu").style.height = "0";
+  document.getElementById("current").textContent="Profile";
   setTimeout(function(){
     document.getElementById("act-overlay").style.height = "0";
     document.getElementById("text-overlay").style.height = "0";
     document.getElementById("pro-overlay").style.height = "calc(100% - 7em)";
     document.getElementById("con-overlay").style.height = "0";
-
-    document.getElementById("current").textContent="Profile";
   }, 500);
 }
 
 function openCon() {
   document.getElementsByClassName("menu-close")[0].style.display = "none";
   document.getElementById("menu").style.height = "0";
+  document.getElementById("current").textContent="Contact";
   setTimeout(function(){
     document.getElementById("act-overlay").style.height = "0";
     document.getElementById("text-overlay").style.height = "0";
     document.getElementById("pro-overlay").style.height = "0";
     document.getElementById("con-overlay").style.height = "calc(100% - 7em)";
-
-    document.getElementById("current").textContent="Contact";
   }, 500);
 }
 
 function openText() {
     document.getElementsByClassName("menu-close")[0].style.display = "none";
     document.getElementById("menu").style.height = "0";
+    document.getElementById("current").textContent="";
     setTimeout(function(){
       document.getElementById("act-overlay").style.height = "0";
       document.getElementById("text-overlay").style.height = "calc(100% - 7em)";
       document.getElementById("pro-overlay").style.height = "0";
       document.getElementById("con-overlay").style.height = "0";
-
-      document.getElementById("current").textContent="";
     }, 500);
 }
 
