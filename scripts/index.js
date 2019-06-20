@@ -72,6 +72,8 @@ if( url.search( 'profile' ) > -1 ) {
 function openNav() {
   document.getElementById("menu").style.height = "calc(100% - 7em)";
   document.getElementsByClassName("menu-close")[0].style.display = "block";
+  document.getElementById("slideBack").style.display = "none";
+  document.getElementById("slide").style.display = "none";
   document.getElementById("text-overlay").style.height = "0";
   document.getElementById("act-overlay").style.height = "0";
   document.getElementById("pro-overlay").style.height = "0";
@@ -82,6 +84,8 @@ function openNav() {
 
 function openAct() {
   document.getElementsByClassName("menu-close")[0].style.display = "none";
+  document.getElementById("slideBack").style.display = "block";
+  document.getElementById("slide").style.display = "block";
   document.getElementById("menu").style.height = "0";
   document.getElementById("current").textContent="Activities";
   document.getElementById("act-overlay").style.height = "calc(100% - 7em)";
@@ -96,6 +100,8 @@ function openActDelay() {
   document.getElementById("current").textContent="Activities";
   setTimeout(function(){
     document.getElementById("act-overlay").style.height = "calc(100% - 7em)";
+    document.getElementById("slideBack").style.display = "block";
+    document.getElementById("slide").style.display = "block";
     document.getElementById("text-overlay").style.height = "0";
     document.getElementById("pro-overlay").style.height = "0";
     document.getElementById("con-overlay").style.height = "0";
@@ -104,6 +110,8 @@ function openActDelay() {
 
 function openPro() {
   document.getElementsByClassName("menu-close")[0].style.display = "none";
+  document.getElementById("slideBack").style.display = "none";
+  document.getElementById("slide").style.display = "none";
   document.getElementById("menu").style.height = "0";
   document.getElementById("current").textContent="Profile";
   document.getElementById("act-overlay").style.height = "0";
@@ -114,6 +122,8 @@ function openPro() {
 
 function openProDelay() {
   document.getElementsByClassName("menu-close")[0].style.display = "none";
+  document.getElementById("slideBack").style.display = "none";
+  document.getElementById("slide").style.display = "none";
   document.getElementById("menu").style.height = "0";
   document.getElementById("current").textContent="Profile";
   setTimeout(function(){
@@ -126,6 +136,8 @@ function openProDelay() {
 
 function openCon() {
   document.getElementsByClassName("menu-close")[0].style.display = "none";
+  document.getElementById("slideBack").style.display = "none";
+  document.getElementById("slide").style.display = "none";
   document.getElementById("menu").style.height = "0";
   document.getElementById("current").textContent="Contact";
   document.getElementById("act-overlay").style.height = "0";
@@ -136,6 +148,8 @@ function openCon() {
 
 function openConDelay() {
   document.getElementsByClassName("menu-close")[0].style.display = "none";
+  document.getElementById("slideBack").style.display = "none";
+  document.getElementById("slide").style.display = "none";
   document.getElementById("menu").style.height = "0";
   document.getElementById("current").textContent="Contact";
   setTimeout(function(){
@@ -148,6 +162,8 @@ function openConDelay() {
 
 function openText() {
     document.getElementsByClassName("menu-close")[0].style.display = "none";
+    document.getElementById("slideBack").style.display = "none";
+    document.getElementById("slide").style.display = "none";
     document.getElementById("menu").style.height = "0";
     document.getElementById("current").textContent="";
     document.getElementById("act-overlay").style.height = "0";
@@ -158,6 +174,8 @@ function openText() {
 
 function openTextDelay() {
     document.getElementsByClassName("menu-close")[0].style.display = "none";
+    document.getElementById("slideBack").style.display = "none";
+    document.getElementById("slide").style.display = "none";
     document.getElementById("menu").style.height = "0";
     document.getElementById("current").textContent="";
     setTimeout(function(){
@@ -265,30 +283,6 @@ document.addEventListener("DOMContentLoaded", function() {
 //   });
 // });
 
-// ------------------------------  Math -----------------------------------------
-$.fn.toEm = function(settings){
-    settings = jQuery.extend({
-        scope: 'body'
-    }, settings);
-    var that = parseInt(this[0],10),
-        scopeTest = jQuery('<div style="display: none; font-size: 1em; margin: 0; padding:0; height: auto; line-height: 1; border:0;">&nbsp;</div>').appendTo(settings.scope),
-        scopeVal = scopeTest.height();
-    scopeTest.remove();
-    return (that / scopeVal).toFixed(8) + 'em';
-};
-
-
-$.fn.toPx = function(settings){
-    settings = jQuery.extend({
-        scope: 'body'
-    }, settings);
-    var that = parseFloat(this[0]),
-        scopeTest = jQuery('<div style="display: none; font-size: 1em; margin: 0; padding:0; height: auto; line-height: 1; border:0;">&nbsp;</div>').appendTo(settings.scope),
-        scopeVal = scopeTest.height();
-    scopeTest.remove();
-    return Math.round(that * scopeVal) + 'px';
-};
-
 // ------------------------------  Buttons -----------------------------------------
 
 var button = document.getElementById('slide');
@@ -297,6 +291,7 @@ button.onclick = function () {
     var mainWidth = document.documentElement.clientWidth;
     var padWidth = 14 * 18;
     var scrollX = mainWidth - padWidth;
+    // var scrollX = document.getElementById('stories').offsetWidth;
   // action:
     var container = document.getElementById('stories');
     sideScroll(container,'right',1,scrollX,15);
@@ -310,6 +305,7 @@ back.onclick = function () {
     var mainWidth = document.documentElement.clientWidth;
     var padWidth = 14 * 18;
     var scrollX = mainWidth - padWidth;
+    // var scrollX = document.getElementById('stories').offsetWidth;
   // action:
     var container = document.getElementById('stories');
     sideScroll(container,'left',1,scrollX,15);
@@ -330,23 +326,3 @@ function sideScroll(element,direction,speed,distance,step){
         }
     }, speed);
 }
-
-// ------------------------------ Activities -----------------------------------------
-
-// var slideIndex = 1;
-// showDivs(slideIndex);
-//
-// function plusDivs(n) {
-//   showDivs(slideIndex += n);
-// }
-//
-// function showDivs(n) {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   if (n > x.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = x.length}
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";
-//   }
-//   x[slideIndex-1].style.display = "block";
-// }
