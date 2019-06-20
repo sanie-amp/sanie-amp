@@ -55,9 +55,9 @@ body, html {
   font-family: Labil Grotesk, sans-serif;
   font-weight: lighter;
   font-style: normal;
-  -webkit-font-feature-settings: "ss01" 0, "calt" 0;
-  -ms-font-feature-settings:     "ss01" 0, "calt" 0;
-  font-feature-settings:         "ss01" 0, "calt" 0;
+  -webkit-font-feature-settings: "ss01" 0, "calt" 0, "ss08" 1;
+  -ms-font-feature-settings:     "ss01" 0, "calt" 0, "ss08" 1;
+  font-feature-settings:         "ss01" 0, "calt" 0, "ss08" 1;
   font-size: 20px;
   line-height: 1.2;
   color: #fff;
@@ -111,9 +111,9 @@ button:focus {outline:none;}
 /* ------------------------- typography -------------------------------- */
 h1 {
   font-family: Labil Grotesk, sans-serif;
-  -webkit-font-feature-settings: "ss01" 0, "calt" 0;
-  -ms-font-feature-settings:     "ss01" 0, "calt" 0;
-  font-feature-settings:         "ss01" 0, "calt" 0;
+  -webkit-font-feature-settings: "ss01" 0, "calt" 0, "ss08" 1;
+  -ms-font-feature-settings:     "ss01" 0, "calt" 0, "ss08" 1;
+  font-feature-settings:         "ss01" 0, "calt" 0, "ss08" 1;
   font-weight: lighter;
   font-style: normal;
   font-size: 2em;
@@ -355,10 +355,11 @@ a.close {
 .act-overlay {
   height: 0%;
 
-  position: fixed;
-  top: 6em;
-  right: 1em;
-  width: calc(100% - 2em);
+  position: static;
+  /* top: 6em;
+  right: 1em; */
+  width: 100%;
+  /* width: 100%; */
 
   z-index: 1;
   background-color: rgba(0,0,0, 0);
@@ -823,6 +824,9 @@ video {
 
   .stories {
     margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
   }
 
   .stories div {
