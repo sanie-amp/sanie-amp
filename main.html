@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="scripts/intersection-observer.js"></script>
   </head>
 
   <body>
@@ -47,10 +48,10 @@
             <a class="menu" href="#menu" onclick="openNav()">&#xe900;</a>
             <div id="menu" class="overlay">
               <div class="overlay-content">
-                <a onclick="openActDelay()" href="#activities">Activities</a>
-                <a onclick="openProDelay()" href="#profile">Profile</a>
-                <a onclick="openConDelay()" href="#contact">Contact</a>
-                <a href="https://www.instagram.com/artmarketproductions/" target='_blank'>Instagram</a>
+                <a class="h" onclick="openActDelay()" href="#activities">Activities</a>
+                <a class="h" onclick="openProDelay()" href="#profile">Profile</a>
+                <a class="h" onclick="openConDelay()" href="#contact">Contact</a>
+                <a class="h" href="https://www.instagram.com/artmarketproductions/" target='_blank'>Instagram</a>
               </div>
             </div>
           </li>
@@ -232,13 +233,13 @@
 
 
     <!-- Videos -->
-    <div class="video-container" id="bg" style="background-color: #fff;">
+    <div class="video-container" id="bg" style="background-color: #000;">
       <video class="lazy" autoplay muted loop playsinline poster="assets/antwerp_1.jpg">
         <!-- <source data-src="assets/antwerp_2.webm" type="video/webm"> -->
         <source data-src="assets/antwerp_1.mp4" type="video/mp4">
       </video>
     </div>
-    <div class="video-container clip-polygon" style="background-color: #fff;">
+    <div class="video-container clip-polygon" style="background-color: #000;">
       <video class="lazy" autoplay muted loop playsinline poster="assets/antwerp_2.jpg">
         <!-- <source data-src="assets/antwerp_2.webm" type="video/webm"> -->
         <source data-src="assets/antwerp_2.mp4" type="video/mp4">
