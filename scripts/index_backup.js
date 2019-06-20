@@ -23,9 +23,9 @@
 // y.addListener(mediaQuery) // Attach listener function on state changes
 
 // ------------------------------ Link Delay -----------------------------------------
-function delay (URL) {
-    setTimeout( function() { window.location = URL }, 500 );
-}
+// function delay (URL) {
+//     setTimeout( function() { window.location = URL }, 500 );
+// }
 
 // ------------------------------ Platform -----------------------------------------
 
@@ -60,7 +60,8 @@ if( url.search( 'profile' ) > -1 ) {
   openNav();
 } else {
   console.log("Main!");
-  openText();
+  // openText();
+  landPage();
 }
 
 function openNav() {
@@ -163,10 +164,21 @@ function openTextDelay() {
 }
 
 function openPlatform() {
+  document.getElementById("flex-container").style.height = "100%";
   document.getElementById("platform").style.height = "calc(100% - 2em)";
-  document.getElementById("logo-main").style.display = "none";
-  document.getElementById("logo-main-cont").style.display = "none";
+  document.getElementById("platform").style.opacity = "1";
   console.log("Opened plat");
+}
+
+function landPage() {
+  // document.getElementById("logo-main").style.display = "flex";
+  document.getElementById("logo-main-cont").style.display = "flex";
+
+  document.getElementById("platform").style.height = "0";
+  document.getElementById("platform").style.opacity = "0";
+  document.getElementsByClassName("menu-close")[0].style.display = "none";
+  document.getElementById("menu").style.height = "0";
+  document.getElementById("current").textContent="";
 }
 
 // ------------------------------ Lazy Load Images -----------------------------------------

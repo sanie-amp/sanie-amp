@@ -15,18 +15,20 @@
 
     <!-- Videos -->
     <div class="video-container" id="bg">
-      <video autoplay muted loop playsinline>
-        <source src="assets/antwerp_1.mp4" type="video/mp4">
+      <video class="lazy" autoplay muted loop playsinline poster="assets/antwerp_1.jpg">
+        <!-- <source data-src="assets/antwerp_2.webm" type="video/webm"> -->
+        <source data-src="assets/antwerp_1.mp4" type="video/mp4">
       </video>
     </div>
     <div class="video-container clip-polygon">
-      <video autoplay muted loop playsinline>
-        <source src="assets/antwerp_2.mp4" type="video/mp4">
+      <video class="lazy" autoplay muted loop playsinline poster="assets/antwerp_2.jpg">
+        <!-- <source data-src="assets/antwerp_2.webm" type="video/webm"> -->
+        <source data-src="assets/antwerp_2.mp4" type="video/mp4">
       </video>
     </div>
 
     <!-- Logo Center -->
-    <div class="flex-container">
+    <div class="flex-container-vid">
       <a href="javascript:delay('main.html')">
         <svg class="logo" id="logo" viewBox="0 0 145.18 50.39">
           <polygon class="polymorph" points="11.63,0 0,50.39 8.06,50.39 19.7,0 "/>
@@ -43,7 +45,7 @@
     </div>
 
   <script src="scripts/anime.min.js"></script>
-  <script src="scripts/index.js"></script>
+  <script src="scripts/start.js"></script>
 
   <!-- Animation -->
   <script>

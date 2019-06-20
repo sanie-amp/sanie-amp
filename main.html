@@ -8,19 +8,14 @@
     <title>AMP</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-    <!-- Slick: -->
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <!-- Add the new slick-theme.css if you want the default styling -->
-    <link rel="stylesheet" type="text/css" href="styles/carousel.css"/>
-    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
 
     <div class="flex-container">
-
-        <!-- <a>
+      <!-- <div class="flex-container-vid">
+        <a>
           <svg class="logo" id="logo-main" onclick="openPlatform()" viewBox="0 0 145.18 50.39">
             <polygon class="polymorph" points="11.63,0 0,50.39 8.06,50.39 19.7,0 "/>
             <polygon class="polymorph2" points="51.02,0 39.39,50.39 47.45,50.39 59.09,0 "/>
@@ -31,7 +26,8 @@
             <polygon class="polymorph5" points="19.7,0 31.34,50.39 39.4,50.39 27.77,0 "/>
             <polygon class="polymorph8" points="129.85,0 137.12,31.5 145.18,31.5 137.91,0 "/>
           </svg>
-        </a> -->
+        </a>
+      </div> -->
 
       <div id="platform" class="platform">
 
@@ -53,9 +49,9 @@
             <a class="menu" href="#menu" onclick="openNav()">&#xe900;</a>
             <div id="menu" class="overlay">
               <div class="overlay-content">
-                <a onclick="openAct()" href="#activities">Activities</a>
-                <a onclick="openPro()" href="#profile">Profile</a>
-                <a onclick="openCon()" href="#contact">Contact</a>
+                <a onclick="openActDelay()" href="#activities">Activities</a>
+                <a onclick="openProDelay()" href="#profile">Profile</a>
+                <a onclick="openConDelay()" href="#contact">Contact</a>
                 <a href="https://www.instagram.com/artmarketproductions/" target='_blank'>Instagram</a>
               </div>
             </div>
@@ -64,71 +60,74 @@
         </ul>
 
         <div id="menu-close" class="menu-close">
-          <a class="close" onclick="openText()" href="#">&#xe901;</a>
+          <a class="close" onclick="openTextDelay()" href="#">&#xe901;</a>
         </div>
 
         <div id="act-overlay" class="act-overlay">
           <div class="act-overlay-content">
-            <div class="stories">
+            <div id="stories" class="stories">
               <div>
-                <p class="b">Beyond the Streets
-                  Opening June 21
+                <h3>Prospect 5</h3>
+                <p class="b">October 24 2020 - January 24 2021
+                  New Orleans
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">AMP will partner with Prospect to produce the Opening Days of Prospect. 5. Prospect New Orleans is a citywide
+                  contemporary art triennial that emphasizes collaborative partnerships and site-specificity, presenting artwork by local,
+                  national, and international artists in both traditional and highly unexpected environments.</p>
+              </div>
+              <div>
+                <h3>Beyond the Streets</h3>
+                <p class="b">Opening June 21
                   Brooklyn, New York
                 </p>
                 <img src="assets/place.jpg" alt="">
                 <p class="c">Celebrating society’s most pervasive mark makers and rule breakers
                   with a sprawling showcase of work by more than 150 artists from around the world - including Jenny Holzar,
                   Shepard Fairey, Takashi Murakami, and Guerilla Girls - Beyond The Streets will take over two floors of
-                  Twenty Five Kent, a new creative office building located on the waterfront in North Williamsburg</p>
+                  Twenty Five Kent.</p>
               </div>
               <div>
-                <p class="b">Market Art + Design
-                  July 5 - 7
+                <h3>Market Art + Design</h3>
+                <p class="b">July 5 - 7
                   The Hamptons
                 </p>
                 <img src="assets/place.jpg" alt="">
                 <p class="c">Market Art + Design, the East End's premier art fair, returns to The Bridgehampton
                   Museum for the fair's ninth and largest edition to date with 90 top galleries from around the world presenting
                   the best in modern and contemporary art and design in an expanded, museum-quality pavilion in the heart of the
-                  Hamptons, just off Highway 27 (Montauk Highway) in the town of Bridgehampton.</p>
+                  Hamptons.</p>
               </div>
               <div>
-                <p class="b">Seattle Art Fair
-                  August 1 - 4
+                <h3>Seattle Art Fair</h3>
+                <p class="b">August 1 - 4
                   Seattle
                 </p>
                 <img src="assets/place.jpg" alt="">
                 <p class="c">Now going into its fifth edition, Seattle Art Fair is a one-of-a-kind destination for the best
                   in modern and contemporary art and a showcase for the vibrant arts community of the Pacific Northwest.</p>
               </div>
+              <div>
+                <h3>Art on Paper</h3>
+                <p class="b">March 5-8 2020
+                  NYC
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">Art on Paper's medium-driven focus lends itself to significant projects - unique moments that
+                  have set the fair apart and established an important destination for the arts in New York City.
+                  Art on Paper's sixth edition will feature 100 top galleries from around the world presenting the best in paper-based art.</p>
+              </div>
+              <div>
+                <h3>Art Market San Francisco</h3>
+                <p class="b">April 2020
+                  San Francisco
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">Art Market San Francisco is the Bay Area's premier art fair. Now going into its 10th edition, Art Market
+                  San Francisco features 85 modern and contemporary art galleries from around the world, welcoming over 25,000 attendees
+                  year over year.</p>
+              </div>
             </div>
-<!-- slick -->
-            <!-- <div class="carousel">
-              <div>
-                <p class="b">Event number one
-                  June 20—24
-                </p>
-                <img src="assets/place.jpg" alt="">
-                <p class="c">Art Market Productions is now AMP. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed.</p>
-              </div>
-              <div>
-                <p class="b">Event number two
-                  June 20—24
-                </p>
-                <img src="assets/place.jpg" alt="">
-                <p class="c">Art Market Productions is now AMP. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
-              </div>
-              <div class="third">
-                <p class="b">Event number three
-                  June 20—24
-                </p>
-                <img src="assets/place.jpg" alt="">
-                <p class="c">Art Market Productions is now AMP. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly.</p>
-              </div>
-              <div><p>your content</p></div>
-              <div><p>your content</p></div>
-              <div><p>your content</p></div>
-            </div> -->
           </div>
         </div>
 
@@ -144,32 +143,82 @@
             </div>
             <div class="column-2">
               <p class="e">Our services include</p>
-              <p class="e">Creative & Marketing - Creative Development, Art Direction, Partnership Marketing, Design Development & Integration,
-                Social Media Implementation, Public Relations, Brand Positioning, Sponsor Development, Strategic Planning & Copywriting.
+              <p class="e">Creative & Marketing:
+                Creative Development
+                Art Direction
+                Partnership Marketing
+                Design Development & Integration
+                Social Media Implementation
+                Public Relations
+                Brand Positioning
+                Sponsor Development
+                Strategic Planning & Copywriting
               </p>
-              <p class="e">Production & Planning - Project Management, Production Planning, Venue Selection, Event/Set Design, Custom Fabrication,
-                Onsite Labor & Management, Performance Measurement, Timeline & Budget Management, Box Office & Ticketing, Food & Beverage.
+              <p class="e">Production & Planning:
+                Project Management
+                Production Planning
+                Venue Selection
+                Event/Set Design
+                Custom Fabrication
+                Onsite Labor & Management
+                Performance Measurement
+                Timeline & Budget Management
+                Box Office & Ticketing
+                Food & Beverage
               </p>
+            </div>
+            <div class="column-3">
               <p class="e">Our clients and partners include</p>
-              <p class="e">1stdibs, AIG, Artsy, Brooklyn Museum, Cadillac, CAMH, David Zwirner, Delta Airlines,
-                Fine Arts Museums of San Francisco, FX Networks, Gagosian, Godiva, Goldenvoice, Gulfstream, Infiniti,
-                J.P. Morgan, Lincoln, Ligne Roset, Museum of Ice Cream, Olson Kundig, Pace, Parrish Art Museum, Peconic Land
-                Trust, Perkins + Will, Perrier, Seattle Art Museum, Roche Bobois Paris, Sotheby's, Teamlab, Tesla, The Wall
-                Street Journal, Uber, United Talent Agency, Viacom, Vulcan Arts + Entertainment.
+              <p class="e">1stdibs
+                AIG
+                Artsy
+                Brooklyn Museum
+                Cadillac
+                CAMH
+                David Zwirner
+                Delta Airlines
+                Fine Arts Museums of San Francisco
+                FX Networks
+                Gagosian
+                Godiva
+                Goldenvoice
+                Gulfstream
+                Infiniti
+                J.P. Morgan
+                Lincoln
+                Ligne Roset
+                Museum of Ice Cream
+                Olson Kundig
+                Pace
+                Parrish Art Museum
+                Peconic Land
+                Trust
+                Perkins + Will
+                Perrier
+                Seattle Art Museum
+                Roche Bobois Paris
+                Sotheby's
+                Teamlab
+                Tesla
+                The Wall Street Journal
+                Uber
+                United Talent Agency
+                Viacom
+                Vulcan Arts + Entertainment
               </p>
             </div>
           </div>
         </div>
 
         <div id="con-overlay" class="con-overlay">
-          <div class="con-overlay-content">
-            <p>Studio:</p>
-            <p>361 Stagg Street</p>
-            <p>Suite 407</p>
-            <p>Brooklyn, New York, 11206</p>
-            <p>212 – 518 – 6912</p>
-            <p>hello@amp.events</p>
-          </div>
+          <ul class="con-overlay-content">
+            <li><p class="f">Studio:</p></li>
+            <li><a class="f" href="https://goo.gl/maps/QToNDgiw6gC69bBZ9" target="_blank">361 Stagg Street</a></li>
+            <li><a class="f" href="https://goo.gl/maps/QToNDgiw6gC69bBZ9" target="_blank">Suite 407</a></li>
+            <li><a class="f" href="https://goo.gl/maps/QToNDgiw6gC69bBZ9" target="_blank">Brooklyn, New York, 11206</a></li>
+            <li><p class="f">212 – 518 – 6912</p></li>
+            <li><a class="f" href="mailto:hello@amp.events">hello@amp.events</a></li>
+          </ul>
         </div>
 
         <div id="text-overlay" class="text-overlay">
@@ -186,20 +235,21 @@
 
     <!-- Videos -->
     <div class="video-container" id="bg" style="background-color: #fff;">
-      <video autoplay muted loop playsinline>
-        <!-- <source src="assets/antwerp_1.mp4" type="video/mp4"> -->
-      </video>
+      <!-- <video class="lazy" autoplay muted loop playsinline poster="assets/antwerp_1.jpg">
+        <source data-src="assets/antwerp_2.webm" type="video/webm">
+        <source data-src="assets/antwerp_1.mp4" type="video/mp4">
+      </video> -->
     </div>
     <div class="video-container clip-polygon" style="background-color: #fff;">
-      <video autoplay muted loop playsinline>
-        <!-- <source src="assets/antwerp_2.mp4" type="video/mp4"> -->
-      </video>
+      <!-- <video class="lazy" autoplay muted loop playsinline poster="assets/antwerp_2.jpg">
+        <source data-src="assets/antwerp_2.webm" type="video/webm">
+        <source data-src="assets/antwerp_2.mp4" type="video/mp4">
+      </video> -->
     </div>
 
   <!-- Animation -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="scripts/index.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="scripts/anime.min.js"></script>
   <script>
     var btn = document.getElementById('logo');
