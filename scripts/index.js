@@ -267,35 +267,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // ------------------------------  Buttons -----------------------------------------
 
-var button = document.getElementById('slide');
-button.onclick = function () {
-    var container = document.getElementById('stories');
-    var scrollX = container.offsetWdith / 6;
-    sideScroll(container,'right',25,200,10);
-};
-
-var back = document.getElementById('slideBack');
-back.onclick = function () {
-    var container = document.getElementById('stories');
-    var scrollX = container.offsetWdith / 6;
-    sideScroll(container,'left',25,200,10);
-};
-
-function sideScroll(element,direction,speed,distance,step){
-    scrollAmount = 0;
-    var slideTimer = setInterval(function(){
-        if(direction == 'left'){
-            // var scrollPercentage = container.offsetWidth;
-            element.scrollLeft -= step;
-        } else {
-            element.scrollLeft += step;
-        }
-        scrollAmount += step;
-        if(scrollAmount >= distance){
-            window.clearInterval(slideTimer);
-        }
-    }, speed);
-}
+// var button = document.getElementById('slide');
+// button.onclick = function () {
+//     var container = document.getElementById('stories');
+//     var scrollX = container.offsetWdith / 6;
+//     sideScroll(container,'right',25,200,10);
+// };
+//
+// var back = document.getElementById('slideBack');
+// back.onclick = function () {
+//     var container = document.getElementById('stories');
+//     var scrollX = container.offsetWdith / 6;
+//     sideScroll(container,'left',25,200,10);
+// };
+//
+// function sideScroll(element,direction,speed,distance,step){
+//     scrollAmount = 0;
+//     var slideTimer = setInterval(function(){
+//         if(direction == 'left'){
+//             // var scrollPercentage = container.offsetWidth;
+//             element.scrollLeft -= step;
+//         } else {
+//             element.scrollLeft += step;
+//         }
+//         scrollAmount += step;
+//         if(scrollAmount >= distance){
+//             window.clearInterval(slideTimer);
+//         }
+//     }, speed);
+// }
 
 // ------------------------------ Activities -----------------------------------------
 
