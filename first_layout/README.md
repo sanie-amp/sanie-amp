@@ -1,2 +1,0 @@
-# sanie-amp
-Home Repository

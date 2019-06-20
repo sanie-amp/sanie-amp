@@ -8,53 +8,256 @@
     <title>AMP</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="scripts/intersection-observer.js"></script>
   </head>
 
   <body>
+    <a class="flex-container-vid" id="logo-main-cont" onclick="openPlatformDelay()">
+      <svg class="logo" id="logo-main" viewBox="0 0 145.18 50.39">
+        <polygon class="polymorph" points="11.63,0 0,50.39 8.06,50.39 19.7,0 "/>
+        <polygon class="polymorph2" points="51.02,0 39.39,50.39 47.45,50.39 59.09,0 "/>
+        <polygon class="polymorph3" points="82.36,0 70.73,50.39 78.79,50.39 90.43,0 "/>
+        <polygon class="polymorph4" points="121.77,0 110.14,50.39 118.2,50.39 129.83,0 "/>
+        <polygon class="polymorph7" points="90.44,0 102.08,50.39 110.14,50.39 98.51,0 "/>
+        <polygon class="polymorph6" points="59.1,0 70.74,50.39 78.8,50.39 67.17,0 "/>
+        <polygon class="polymorph5" points="19.7,0 31.34,50.39 39.4,50.39 27.77,0 "/>
+        <polygon class="polymorph8" points="129.85,0 137.12,31.5 145.18,31.5 137.91,0 "/>
+      </svg>
+    </a>
+
+    <div class="flex-container">
+
+      <div id="platform" class="platform">
+
+        <ul class="navigation">
+          <li><p class="d" id="current" href="#"></p></li>
+          <li>
+            <svg class="nav-logo" id="logo" viewBox="0 0 145.18 50.39">
+              <polygon class="polymorph" points="11.63,0 0,50.39 8.06,50.39 19.7,0 "/>
+              <polygon class="polymorph2" points="51.02,0 39.39,50.39 47.45,50.39 59.09,0 "/>
+              <polygon class="polymorph3" points="82.36,0 70.73,50.39 78.79,50.39 90.43,0 "/>
+              <polygon class="polymorph4" points="121.77,0 110.14,50.39 118.2,50.39 129.83,0 "/>
+              <polygon class="polymorph7" points="90.44,0 102.08,50.39 110.14,50.39 98.51,0 "/>
+              <polygon class="polymorph6" points="59.1,0 70.74,50.39 78.8,50.39 67.17,0 "/>
+              <polygon class="polymorph5" points="19.7,0 31.34,50.39 39.4,50.39 27.77,0 "/>
+              <polygon class="polymorph8" points="129.85,0 137.12,31.5 145.18,31.5 137.91,0 "/>
+            </svg>
+          </li>
+          <li>
+            <a class="menu" href="#menu" onclick="openNav()">&#xe900;</a>
+            <div id="menu" class="overlay">
+              <div class="overlay-content">
+                <a class="h" onclick="openActDelay()" href="#activities">Activities</a>
+                <a class="h" onclick="openProDelay()" href="#profile">Profile</a>
+                <a class="h" onclick="openConDelay()" href="#contact">Contact</a>
+                <a class="h" href="https://www.instagram.com/artmarketproductions/" target='_blank'>Instagram</a>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+        <div id="menu-close" class="menu-close">
+          <a class="close" onclick="openTextDelay()" href="#">&#xe901;</a>
+        </div>
+
+        <div id="act-overlay" class="act-overlay">
+          <div class="act-overlay-content">
+            <div id="stories" class="stories">
+              <div>
+                <h3>Prospect 5</h3>
+                <p class="b">Oct 2020 - Jan 2021
+                  New Orleans
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">AMP will partner with Prospect to produce the Opening Days of Prospect. 5. Prospect New Orleans is a citywide
+                  contemporary art triennial that emphasizes collaborative partnerships and site-specificity, presenting artwork by local,
+                  national, and international artists in both traditional and highly unexpected environments.</p>
+              </div>
+              <div>
+                <h3>Beyond the Streets</h3>
+                <p class="b">Opening June 21
+                  Brooklyn, New York
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">Celebrating society’s most pervasive mark makers and rule breakers
+                  with a sprawling showcase of work by more than 150 artists from around the world - including Jenny Holzar,
+                  Shepard Fairey, Takashi Murakami, and Guerilla Girls - Beyond The Streets will take over two floors of
+                  Twenty Five Kent.</p>
+              </div>
+              <div>
+                <h3>Market Art + Design</h3>
+                <p class="b">July 5 - 7
+                  The Hamptons
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">Market Art + Design, the East End's premier art fair, returns to The Bridgehampton
+                  Museum for the fair's ninth and largest edition to date with 90 top galleries from around the world presenting
+                  the best in modern and contemporary art and design in an expanded, museum-quality pavilion in the heart of the
+                  Hamptons.</p>
+              </div>
+              <div>
+                <h3>Seattle Art Fair</h3>
+                <p class="b">August 1 - 4
+                  Seattle
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">Now going into its fifth edition, Seattle Art Fair is a one-of-a-kind destination for the best
+                  in modern and contemporary art and a showcase for the vibrant arts community of the Pacific Northwest.</p>
+              </div>
+              <div>
+                <h3>Art on Paper</h3>
+                <p class="b">March 5-8 2020
+                  NYC
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">Art on Paper's medium-driven focus lends itself to significant projects - unique moments that
+                  have set the fair apart and established an important destination for the arts in New York City.
+                  Art on Paper's sixth edition will feature 100 top galleries from around the world presenting the best in paper-based art.</p>
+              </div>
+              <div>
+                <h3>Art Market San Francisco</h3>
+                <p class="b">April 2020
+                  San Francisco
+                </p>
+                <img src="assets/place.jpg" alt="">
+                <p class="c">Art Market San Francisco is the Bay Area's premier art fair. Now going into its 10th edition, Art Market
+                  San Francisco features 85 modern and contemporary art galleries from around the world, welcoming over 25,000 attendees
+                  year over year.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="pro-overlay" class="pro-overlay">
+          <div class="pro-overlay-content">
+            <div class="column-1">
+              <p class="e">About us</p>
+              <p class="e">AMP believes that better experiences can make better people.
+                Ten years ago we started out with a vision to improve the ecosystem of events in the visual arts and we since
+                have had the privilege of welcoming over a million guests.  Today we look forward to utilizing our expanded capabilities,
+                longstanding connections and reputation for excellence to bring new and exciting ideas to life.
+              </p>
+            </div>
+            <div class="column-2">
+              <p class="e">Our services include</p>
+              <p class="e">Creative & Marketing:
+                Creative Development
+                Art Direction
+                Partnership Marketing
+                Design Development & Integration
+                Social Media Implementation
+                Public Relations
+                Brand Positioning
+                Sponsor Development
+                Strategic Planning & Copywriting
+              </p>
+              <p class="e">Production & Planning:
+                Project Management
+                Production Planning
+                Venue Selection
+                Event/Set Design
+                Custom Fabrication
+                Onsite Labor & Management
+                Performance Measurement
+                Timeline & Budget Management
+                Box Office & Ticketing
+                Food & Beverage
+              </p>
+            </div>
+            <div class="column-3">
+              <p class="e">Our clients and partners include</p>
+              <p class="e">1stdibs
+                AIG
+                Artsy
+                Brooklyn Museum
+                Cadillac
+                CAMH
+                David Zwirner
+                Delta Airlines
+                Fine Arts Museums of San Francisco
+                FX Networks
+                Gagosian
+                Godiva
+                Goldenvoice
+                Gulfstream
+                Infiniti
+                J.P. Morgan
+                Lincoln
+                Ligne Roset
+                Museum of Ice Cream
+                Olson Kundig
+                Pace
+                Parrish Art Museum
+                Peconic Land
+                Trust
+                Perkins + Will
+                Perrier
+                Seattle Art Museum
+                Roche Bobois Paris
+                Sotheby's
+                Teamlab
+                Tesla
+                The Wall Street Journal
+                Uber
+                United Talent Agency
+                Viacom
+                Vulcan Arts + Entertainment
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="con-overlay" class="con-overlay">
+          <ul class="con-overlay-content">
+            <li><p class="f">Studio:</p></li>
+            <li><a class="f" href="https://goo.gl/maps/QToNDgiw6gC69bBZ9" target="_blank">361 Stagg Street</a></li>
+            <li><a class="f" href="https://goo.gl/maps/QToNDgiw6gC69bBZ9" target="_blank">Suite 407</a></li>
+            <li><a class="f" href="https://goo.gl/maps/QToNDgiw6gC69bBZ9" target="_blank">Brooklyn, New York, 11206</a></li>
+            <li><p class="f">212 – 518 – 6912</p></li>
+            <li><a class="f" href="mailto:hello@amp.events">hello@amp.events</a></li>
+          </ul>
+        </div>
+
+        <div id="text-overlay" class="text-overlay">
+          <div class="text">
+            <p class="a">Art Market Productions is now AMP, a creative events firm that designs, builds, promotes
+              and produces important cultural experiences worldwide.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
 
     <!-- Videos -->
-    <div class="video-container" id="bg">
+    <div class="video-container" id="bg" style="background-color: #000;">
       <video class="lazy" autoplay muted loop playsinline poster="assets/antwerp_1.jpg">
         <!-- <source data-src="assets/antwerp_2.webm" type="video/webm"> -->
         <source data-src="assets/antwerp_1.mp4" type="video/mp4">
       </video>
     </div>
-    <div class="video-container clip-polygon">
+    <div class="video-container clip-polygon" style="background-color: #000;">
       <video class="lazy" autoplay muted loop playsinline poster="assets/antwerp_2.jpg">
         <!-- <source data-src="assets/antwerp_2.webm" type="video/webm"> -->
         <source data-src="assets/antwerp_2.mp4" type="video/mp4">
       </video>
     </div>
 
-    <!-- Logo Center -->
-    <div class="flex-container-vid">
-      <a href="javascript:delay('main.html')">
-        <svg class="logo" id="logo" viewBox="0 0 145.18 50.39">
-          <polygon class="polymorph" points="11.63,0 0,50.39 8.06,50.39 19.7,0 "/>
-          <polygon class="polymorph2" points="51.02,0 39.39,50.39 47.45,50.39 59.09,0 "/>
-          <polygon class="polymorph3" points="82.36,0 70.73,50.39 78.79,50.39 90.43,0 "/>
-          <polygon class="polymorph4" points="121.77,0 110.14,50.39 118.2,50.39 129.83,0 "/>
-          <polygon class="polymorph7" points="90.44,0 102.08,50.39 110.14,50.39 98.51,0 "/>
-          <polygon class="polymorph6" points="59.1,0 70.74,50.39 78.8,50.39 67.17,0 "/>
-          <polygon class="polymorph5" points="19.7,0 31.34,50.39 39.4,50.39 27.77,0 "/>
-          <polygon class="polymorph8" points="129.85,0 137.12,31.5 145.18,31.5 137.91,0 "/>
-        </svg>
-    </a>
-
-    </div>
-
-  <script src="scripts/anime.min.js"></script>
-  <script src="scripts/start.js"></script>
-
   <!-- Animation -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="scripts/anime.min.js"></script>
   <script>
     var btn = document.getElementById('logo');
+    var btn2 = document.getElementById('logo-main-cont');
 
     var tl = anime.timeline({
       easing: 'easeInExpo',
       autoplay: false,
-      duration: 800
+      duration: 1700
     });
 
     tl
@@ -95,36 +298,100 @@
       points: [
         { value: '31.3,50.2 31.3,50.2 39.3,50.2 39.3,50.2' }
       ],
-      duration: 500,
+      duration: 400,
       loop: false
-    }, 300)
+    }, 400)
     .add({
       targets: '.polymorph6',
       points: [
         { value: '70.7,50.2 70.7,50.2 78.8,50.2 78.8,50.2' }
       ],
-      duration: 500,
+      duration: 400,
       loop: false
-    }, 300)
+    }, 400)
     .add({
       targets: '.polymorph7',
       points: [
         { value: '102,50.2 102,50.2 110.1,50.2 110.1,50.2' }
       ],
-      duration: 500,
+      duration: 400,
       loop: false
-    }, 300)
+    }, 400)
     .add({
       targets: '.polymorph8',
       points: [
         { value: '137.1,31.3 137.1,31.3 145.1,31.3 145.1,31.3' }
       ],
+      duration: 400,
+      loop: false
+    }, 400)
+    .add({
+      targets: '.polymorph',
+      points: [
+        { value: '11.63,0 0,50.39 8.06,50.39 19.7,0' }
+      ],
+      duration: 400,
+      loop: false
+    }, 1000)
+    .add({
+      targets: '.polymorph2',
+      points: [
+        { value: '51.02,0 39.39,50.39 47.45,50.39 59.09,0' }
+      ],
+      duration: 400,
+      loop: false
+    }, 1000)
+    .add({
+      targets: '.polymorph3',
+      points: [
+        { value: '82.36,0 70.73,50.39 78.79,50.39 90.43,0' }
+      ],
+      duration: 400,
+      loop: false
+    }, 1000)
+    .add({
+      targets: '.polymorph4',
+      points: [
+        { value: '121.77,0 110.14,50.39 118.2,50.39 129.83,0' }
+      ],
+      duration: 400,
+      loop: false
+    }, 1000)
+    .add({
+      targets: '.polymorph5',
+      points: [
+        { value: '19.7,0 31.34,50.39 39.4,50.39 27.77,0' }
+      ],
       duration: 500,
       loop: false
-    }, 300);
+    }, 1200)
+    .add({
+      targets: '.polymorph6',
+      points: [
+        { value: '59.1,0 70.74,50.39 78.8,50.39 67.17,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1200)
+    .add({
+      targets: '.polymorph7',
+      points: [
+        { value: '90.44,0 102.08,50.39 110.14,50.39 98.51,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1200)
+    .add({
+      targets: '.polymorph8',
+      points: [
+        { value: '129.85,0 137.12,31.5 145.18,31.5 137.91,0' }
+      ],
+      duration: 500,
+      loop: false
+    }, 1200);
 
-    // btn.onmouseenter = tl.restart;
-    document.onclick = tl.restart;
+    btn.onmouseenter = tl.restart;
+    btn2.onmousedown = tl.restart;
 
     var promise = tl.finished.then(() => {
       console.log("finished");
