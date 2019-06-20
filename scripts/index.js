@@ -48,18 +48,24 @@ var url = window.location.href;
 // Check if URL contains the keyword
 if( url.search( 'profile' ) > -1 ) {
   console.log("Pro");
+  openPlatform();
   openPro();
 } else if( url.search( 'activities' ) > -1 ) {
   console.log("Act!");
+  openPlatform();
   openAct();
 } else if( url.search( 'contact' ) > -1 ) {
   console.log("Contact!");
+  openPlatform();
   openCon();
 } else if( url.search( 'menu' ) > -1 ) {
   console.log("Menu!");
+  openPlatform();
   openNav();
 } else {
   console.log("Main!");
+  // openPlatform();
+  openStart();
   openText();
 }
 
@@ -162,11 +168,35 @@ function openTextDelay() {
     }, 500);
 }
 
+function openPlatformDelay() {
+  // document.getElementById("platform").style.minHeight = "0";
+  setTimeout(function(){
+    // document.getElementById("platform").style.minHeight = "calc(100% - 2em)";
+
+    // close big logo:
+    document.getElementById("logo-main").style.display = "none";
+    document.getElementById("logo-main-cont").style.display = "none";
+
+    //open platform:
+    console.log("Opened plat");
+    document.getElementById("platform").style.opacity = "1";
+  }, 800);
+}
+
+function openStart() {
+  // close big logo:
+  document.getElementById("logo-main").style.display = "block";
+  document.getElementById("logo-main-cont").style.display = "flex";
+}
+
 function openPlatform() {
-  document.getElementById("platform").style.height = "calc(100% - 2em)";
-  document.getElementById("logo-main").style.display = "none";
-  document.getElementById("logo-main-cont").style.display = "none";
-  console.log("Opened plat");
+    // close big logo:
+    document.getElementById("logo-main").style.display = "none";
+    document.getElementById("logo-main-cont").style.display = "none";
+    //open platform:
+    console.log("Opened plat");
+    document.getElementById("platform").style.opacity = "1";
+    openText();
 }
 
 // ------------------------------ Lazy Load Images -----------------------------------------
