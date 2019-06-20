@@ -59,7 +59,7 @@ body, html {
   -ms-font-feature-settings:     "ss01" 0, "calt" 0;
   font-feature-settings:         "ss01" 0, "calt" 0;
   font-size: 20px;
-  line-height: 1.1;
+  line-height: 1.2;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -140,25 +140,25 @@ h3 {
   font-weight: 500;
   font-style: normal;
   font-size: 1rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 p.b, p.c {
   font-weight: lighter;
   font-style: normal;
   font-size: 1rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 p.e {
   font-size: 1.1rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 p.b {
   white-space: pre-line;
   padding-bottom: .7em;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 p.c {

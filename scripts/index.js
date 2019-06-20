@@ -201,6 +201,30 @@ function openPlatform() {
 
 // ------------------------------ Lazy Load Images -----------------------------------------
 
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.srcset = lazyImage.dataset.srcset;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
 // ------------------------------ Lazy Load Video -----------------------------------------
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -229,6 +253,49 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+// $('#next_nav').click(function () {
+//   $( "#stories" ).animate({
+//     scrollRight: '+=156px'
+//   });
+// });
+// $('#prev_nav').click(function () {
+//   $( "#nav" ).animate({
+//     scrollLeft: '-=156px'
+//   });
+// });
+
+// ------------------------------  Buttons -----------------------------------------
+
+var button = document.getElementById('slide');
+button.onclick = function () {
+    var container = document.getElementById('stories');
+    var scrollX = container.offsetWdith / 6;
+    sideScroll(container,'right',25,200,10);
+};
+
+var back = document.getElementById('slideBack');
+back.onclick = function () {
+    var container = document.getElementById('stories');
+    var scrollX = container.offsetWdith / 6;
+    sideScroll(container,'left',25,200,10);
+};
+
+function sideScroll(element,direction,speed,distance,step){
+    scrollAmount = 0;
+    var slideTimer = setInterval(function(){
+        if(direction == 'left'){
+            // var scrollPercentage = container.offsetWidth;
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+    }, speed);
+}
 
 // ------------------------------ Activities -----------------------------------------
 
