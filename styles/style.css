@@ -21,9 +21,9 @@
 @font-face {
   font-family: "Labil Grotesk";
   src:
-    url('fonts/LabilGrotesk-Thin.otf') format('opentype');
-    /* url("fonts/LabilGrotesk-Light.woff2") format("woff2"),
-    url("fonts/LabilGrotesk-Light.woff") format("woff"); */
+    url('fonts/LabilGrotesk-Thin.otf') format('opentype'),
+    url("fonts/LabilGrotesk-Thin.woff2") format("woff2"),
+    url("fonts/LabilGrotesk-Thin.woff") format("woff");
   font-weight: lighter;
   font-style: normal;
 }
@@ -150,9 +150,13 @@ p.b, p.c {
   line-height: 1.2;
 }
 
-p.e {
+p.e, p.e2 {
   font-size: 1.1rem;
   line-height: 1.2;
+}
+
+p.e2 {
+  font-weight: 500;
 }
 
 p.b {
@@ -659,7 +663,7 @@ video {
     /* width: 30vw; */
   }
 
-  p.e {
+  p.e, p.e2 {
     font-size: 1rem;
   }
 
