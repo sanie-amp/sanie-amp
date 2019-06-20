@@ -265,37 +265,71 @@ document.addEventListener("DOMContentLoaded", function() {
 //   });
 // });
 
+// ------------------------------  Math -----------------------------------------
+$.fn.toEm = function(settings){
+    settings = jQuery.extend({
+        scope: 'body'
+    }, settings);
+    var that = parseInt(this[0],10),
+        scopeTest = jQuery('<div style="display: none; font-size: 1em; margin: 0; padding:0; height: auto; line-height: 1; border:0;">&nbsp;</div>').appendTo(settings.scope),
+        scopeVal = scopeTest.height();
+    scopeTest.remove();
+    return (that / scopeVal).toFixed(8) + 'em';
+};
+
+
+$.fn.toPx = function(settings){
+    settings = jQuery.extend({
+        scope: 'body'
+    }, settings);
+    var that = parseFloat(this[0]),
+        scopeTest = jQuery('<div style="display: none; font-size: 1em; margin: 0; padding:0; height: auto; line-height: 1; border:0;">&nbsp;</div>').appendTo(settings.scope),
+        scopeVal = scopeTest.height();
+    scopeTest.remove();
+    return Math.round(that * scopeVal) + 'px';
+};
+
 // ------------------------------  Buttons -----------------------------------------
 
-// var button = document.getElementById('slide');
-// button.onclick = function () {
-//     var container = document.getElementById('stories');
-//     var scrollX = container.offsetWdith / 6;
-//     sideScroll(container,'right',25,200,10);
-// };
-//
-// var back = document.getElementById('slideBack');
-// back.onclick = function () {
-//     var container = document.getElementById('stories');
-//     var scrollX = container.offsetWdith / 6;
-//     sideScroll(container,'left',25,200,10);
-// };
-//
-// function sideScroll(element,direction,speed,distance,step){
-//     scrollAmount = 0;
-//     var slideTimer = setInterval(function(){
-//         if(direction == 'left'){
-//             // var scrollPercentage = container.offsetWidth;
-//             element.scrollLeft -= step;
-//         } else {
-//             element.scrollLeft += step;
-//         }
-//         scrollAmount += step;
-//         if(scrollAmount >= distance){
-//             window.clearInterval(slideTimer);
-//         }
-//     }, speed);
-// }
+var button = document.getElementById('slide');
+button.onclick = function () {
+  // math:
+    var mainWidth = document.documentElement.clientWidth;
+    var padWidth = 14 * 18;
+    var scrollX = mainWidth - padWidth;
+  // action:
+    var container = document.getElementById('stories');
+    sideScroll(container,'right',1,scrollX,15);
+    console.log(padWidth);
+    console.log(scrollX);
+};
+
+var back = document.getElementById('slideBack');
+back.onclick = function () {
+  // math:
+    var mainWidth = document.documentElement.clientWidth;
+    var padWidth = 14 * 18;
+    var scrollX = mainWidth - padWidth;
+  // action:
+    var container = document.getElementById('stories');
+    sideScroll(container,'left',1,scrollX,15);
+};
+
+function sideScroll(element,direction,speed,distance,step){
+    scrollAmount = 0;
+    var slideTimer = setInterval(function(){
+        if(direction == 'left'){
+            // var scrollPercentage = container.offsetWidth;
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+    }, speed);
+}
 
 // ------------------------------ Activities -----------------------------------------
 
