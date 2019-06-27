@@ -127,9 +127,9 @@ p.d {
 p.a {
   font-size: 3em;
   text-align: center;
-  -webkit-hyphens: auto;
+  /* -webkit-hyphens: auto;
       -ms-hyphens: auto;
-          hyphens: auto;
+          hyphens: auto; */
   position: relative;
   top: 25%;
   max-width: 80%;
