@@ -908,6 +908,16 @@ video {
     font-size: 0.8rem;
   }
 
+  .nav-logo {
+    height: 1.2em;
+    width: auto;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+}
+
+@media screen and (max-width:330px) {
   .pro-overlay-content {
     -webkit-flex-direction: column;
     flex-direction: column;
@@ -919,17 +929,16 @@ video {
     align-items: flex-start;
 }
 
+  .act-overlay-content {
+      -webkit-align-items: flex-start;
+      align-items: flex-start;
+      -webkit-justify-content: flex-start;
+      justify-content: flex-start;
+  }
+
   p.e {
-    color: yellow;
+    color: red;
   }
-
-  .nav-logo {
-    height: 1.2em;
-    width: auto;
-    cursor: pointer;
-    line-height: 1;
-  }
-
 }
 
 @media (min-aspect-ratio: 16/9) {
