@@ -930,6 +930,7 @@ video {
   }
 
   .act-overlay {
+    position: relative;
     -webkit-align-items: flex-start;
     align-items: flex-start;
     -webkit-justify-content: flex-start;
@@ -944,7 +945,7 @@ video {
   }
 
   p.e {
-    color: yellow;
+    color: green;
   }
 }
 
