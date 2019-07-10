@@ -942,6 +942,11 @@ video {
     display: block;
   }
 
+  .stories {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   /* .act-overlay-content {
       -webkit-align-items: flex-start;
       align-items: flex-start;
@@ -954,7 +959,7 @@ video {
   } */
 
   p.e {
-    color: yellow;
+    color: green;
   }
 }
 
