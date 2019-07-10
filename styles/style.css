@@ -908,10 +908,16 @@ video {
     font-size: 0.8rem;
   }
 
-  .pro-overlay {
-    position: relative;
-    top: 0;
-  }
+  .pro-overlay-content {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
 
   p.e {
     color: red;
