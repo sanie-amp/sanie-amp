@@ -938,6 +938,10 @@ video {
     height: 100%;
   }
 
+  .act-overlay-content {
+    display: block;
+  }
+
   /* .act-overlay-content {
       -webkit-align-items: flex-start;
       align-items: flex-start;
