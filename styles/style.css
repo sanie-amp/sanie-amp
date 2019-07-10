@@ -944,8 +944,12 @@ video {
       justify-content: flex-start;
   }
 
+  .platform {
+    position: static;
+  }
+
   p.e {
-    color: green;
+    color: blue;
   }
 }
 
