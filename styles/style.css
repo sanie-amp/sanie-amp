@@ -935,21 +935,22 @@ video {
     align-items: flex-start;
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
+    height: 100%;
   }
 
-  .act-overlay-content {
+  /* .act-overlay-content {
       -webkit-align-items: flex-start;
       align-items: flex-start;
       -webkit-justify-content: flex-start;
       justify-content: flex-start;
-  }
-
+  } */
+/*
   .platform {
     position: static;
-  }
+  } */
 
   p.e {
-    color: blue;
+    color: yellow;
   }
 }
 
