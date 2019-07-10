@@ -945,22 +945,10 @@ video {
   .stories {
     overflow-y: hidden;
     display: block;
-    /* flex-direction: column;
-    justify-content: flex-start; */
   }
 
-  /* .act-overlay-content {
-      -webkit-align-items: flex-start;
-      align-items: flex-start;
-      -webkit-justify-content: flex-start;
-      justify-content: flex-start;
-  } */
-/*
-  .platform {
-    position: static;
-  } */
-
-  p.e {
+  p.a {
+    font-size: 1em;
     color: yellow;
   }
 }
