@@ -913,6 +913,10 @@ video {
     top: 0;
   }
 
+  p.e {
+    color: red;
+  }
+
   .nav-logo {
     height: 1.2em;
     width: auto;
