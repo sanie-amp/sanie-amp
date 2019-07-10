@@ -927,7 +927,14 @@ video {
     justify-content: flex-start;
     -webkit-align-items: flex-start;
     align-items: flex-start;
-}
+  }
+
+  .act-overlay {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
 
   .act-overlay-content {
       -webkit-align-items: flex-start;
@@ -937,7 +944,7 @@ video {
   }
 
   p.e {
-    color: red;
+    color: yellow;
   }
 }
 
