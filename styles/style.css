@@ -908,6 +908,11 @@ video {
     font-size: 0.8rem;
   }
 
+  .pro-overlay {
+    position: relative;
+    top: 0;
+  }
+
   .nav-logo {
     height: 1.2em;
     width: auto;
